@@ -3,7 +3,7 @@ import { experiences } from "../data.js";
 export default function Experience() {
   return (
     <div className="container">
-      <header className="section-header">
+      <header className="section-header center-text">
         <h2>Experience</h2>
       </header>
       <div className="stack gap-m">

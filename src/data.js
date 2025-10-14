@@ -6,8 +6,8 @@ export const identity = {
   title: "Data Scientist",          // Your headline/title
   email: "paritoshkrcg@gmail.com",    // For footer/contact
   location: "Kent, OH",    // Optional
-  resumeUrl: "../public/PARITOSH_GANDRE.pdf",         // Keep path; replace file in /public
-  profileImage: "../public/profile.png",     // Replace file in /public
+  resumeUrl: "/PARITOSH_GANDRE.pdf",         // Keep path; replace file in /public
+  profileImage: "/profile.png",     // Replace file in /public
   shortIntro:
 `I’m a data scientist with a strong foundation in statistics, machine learning, and biomedical data analysis. My work spans genomic research, healthcare analytics, and AI-driven decision systems from building CNN and HMM models for DNA sequence classification to developing end-to-end dashboards for clinical and operational monitoring. I enjoy designing interpretable models, validating them with real-world evidence, and deploying scalable pipelines using Python, SQL, and cloud tools. My focus is on translating complex biological and clinical datasets into insights that support data-driven research and better patient outcomes`,
   };

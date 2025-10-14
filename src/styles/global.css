@@ -231,6 +231,7 @@ a:focus-visible, button:focus-visible { box-shadow: var(--focus); border-radius:
 
 .hero { padding: clamp(28px, 5vw, 60px) 0; }
 .hero-grid {
+  padding: 10px;
   display: grid;
   grid-template-columns: 240px 1fr;
   gap: 24px;

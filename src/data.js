@@ -270,7 +270,7 @@ Tools & Platforms: Python, R, SQL, TensorFlow, PyTorch, Power BI, Tableau, AWS, 
 Skills: Statistics, Model Interpretation, Machine Learning, Organization`
   },
   {
-    school: "Ramrao Adik Institute of Technology - University of Mumbai",
+    school: "University of Mumbai",
     degree: "B.E. in Computer Science",
     dates: "Jan 2021 – Jun 2023",
     details: `GPA: 8.99

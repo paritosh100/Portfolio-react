@@ -25,7 +25,7 @@ export default function Nav({ active, toggleTheme, theme }) {
         <ul className="navlist">
           {nav.map((item) => (
             <li key={item.id}>
-              <a href={`#${item.id}`} className={active === item.id ? "active" : ""}>
+              <a href={`#${item.id}`} className="btn nav">
                 {item.label}
               </a>
             </li>
@@ -34,9 +34,9 @@ export default function Nav({ active, toggleTheme, theme }) {
       </nav>
 
       {/* Theme toggle (always visible) */}
-      <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+      {/* <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
         {theme === "dark" ? <FaSun size={18} /> : <FaMoon size={18} />}
-      </button>
+      </button> */}
 
       {/* Mobile hamburger */}
       <button

@@ -9,6 +9,7 @@ import Certificates from "./components/Certifications.jsx";
 import Publications from "./components/Publications.jsx";
 import Footer from "./components/Footer.jsx";
 import { nav, education } from "./data.js";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   // Theme persistence
@@ -65,6 +66,7 @@ export default function App() {
         {/* No contact section here; footer is outside main so it stays a thin strip */}
       </main>
       <Footer />
+      <Analytics/>
     </>
   );
 }

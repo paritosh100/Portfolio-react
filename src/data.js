@@ -251,9 +251,11 @@ export const nav = [
   { id: "home", label: "Home" },
 //   { id: "about", label: "About" },
   { id: "education", label: "Education" },
-  { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
+  { id: "skills", label: "Skills" },
+  
+  
   {id: 'certifications',label:'Certifications'},
   { id: "publications", label: "Publications" },
 //   { id: "footer", label: "Contact" }

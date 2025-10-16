@@ -124,7 +124,7 @@ a:focus-visible, button:focus-visible { box-shadow: var(--focus); border-radius:
 } */
 
 /* Mobile menu */
-.hamburger { display: none; background: transparent; border: none; color: var(--text); cursor: pointer; }
+.hamburger { display: none; background: transparent; border: none; color: #f9f9f9; cursor: pointer; }
 .nav-mobile { display: none; }
 .navlist-mobile {
   list-style: none; margin: 0; padding: 12px; display: grid; gap: 6px;
@@ -200,7 +200,7 @@ a:focus-visible, button:focus-visible { box-shadow: var(--focus); border-radius:
 }
 .hero-title { margin-bottom: 8px;  }
 .hero-title-accent { color: #ff4655; }
-.hero-intro { color: var(--muted); font-size: clamp(16px, 1.8vw, 19px); }
+.hero-intro { color: var(--muted); font-size: clamp(16px, 1.8vw, 19px); padding: 10px; }
 
 .hero-photo { display: flex; justify-content: center; }
 .avatar {

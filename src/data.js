@@ -46,9 +46,11 @@ export const experiences = [
     start: "July 2025",
     end: "Present",
     bullets: [
-      "Built risk-stratification models (AUC 0.86) to prioritize outreach and reduce readmissions",
-      "Shipped feature pipelines on AWS + Airflow; cut model training time by 40%",
-      "Partnered with clinicians to align metrics with actual patient outcomes"
+      "Developed a cross-platform React Native + Expo app for real-time exercise form correction using TensorFlow Lite and VisionCamera for on-device pose detection",
+
+"Implemented joint angle calculations and feedback logic, achieving <50 ms inference latency on mobile devices for responsive visual and audio guidance",
+
+"Built modular components in TypeScript for camera streaming, overlay rendering, and inference, enabling scalable extension to new exercise types",
     ]
   },
   {

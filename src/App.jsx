@@ -10,6 +10,7 @@ import Publications from "./components/Publications.jsx";
 import Footer from "./components/Footer.jsx";
 import { nav, education } from "./data.js";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function App() {
   // Theme persistence
@@ -67,6 +68,7 @@ export default function App() {
       </main>
       <Footer />
       <Analytics/>
+      <SpeedInsights/>
     </>
   );
 }

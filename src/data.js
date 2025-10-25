@@ -111,6 +111,13 @@ export const experiences = [{
 
 // Projects (3–6 recommended)
 export const projects = [{
+        title: "EchoHealth: Safe Healthcare Voice Agent",
+        description: "Voice-first medical information assistant powered by LiveKit WebRTC and OpenAI Realtime API. Provides evidence-based health information exclusively from MEDLINE sources with safety-first design, always recommending professional healthcare consultation. Features RAG system with FAISS vector search and inline citations.",
+        tech: ["Python", "LiveKit", "OpenAI Realtime", "React", "FAISS", "RAG", "Flask", "WebRTC"],
+        repo: "https://github.com/paritosh100/EchoHealth--A-safe-healthcare-voice-agent",
+        live: ""
+    },
+    {
         title: "Multi-AI Agent Project Planner",
         description: "Collaborative AI system where multiple specialized agents (Planner, Estimator, Allocator) work together to create intelligent project plans. Uses CrewAI framework to transform plain-text requirements into context-aware task breakdowns with realistic time estimates and smart resource allocation.",
         tech: ["Python", "CrewAI", "OpenAI GPT-4", "Streamlit", "Multi-Agent Systems"],
@@ -121,7 +128,7 @@ export const projects = [{
         title: "Real-Time Voice RAG Assistant",
         description: "Full-stack voice-first AI assistant using LiveKit WebRTC for real-time communication and OpenAI Realtime API for multimodal voice responses. Features RAG over indexed documents with FAISS vector search, ensuring answers are strictly grounded in provided knowledge base. Built with React frontend and Python backend.",
         tech: ["Python", "LiveKit", "OpenAI Realtime", "React", "FAISS", "RAG", "Flask"],
-        repo: "https://github.com/paritosh100/livekit-voice-agent",
+        repo: "https://github.com/paritosh100/livekit-voice-agenta",
         live: ""
     },
     {
@@ -172,7 +179,8 @@ export const projects = [{
         tech: ["Python", "Sentinel-2", "RandomForest", "GDAL", "scikit-learn"],
         repo: "https://github.com/paritosh100/Water-Quality-Analysis",
         live: ""
-    }
+    },
+
 ];
 export const certificates = [{
         title: "AWS Cloud Technical Essentials",

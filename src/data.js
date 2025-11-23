@@ -44,11 +44,9 @@ export const experiences = [{
         start: "July 2025",
         end: "Present",
         bullets: [
-            "Developed a cross-platform React Native + Expo app for real-time exercise form correction using TensorFlow Lite and VisionCamera for on-device pose detection",
-
-            "Implemented joint angle calculations and feedback logic, achieving <50 ms inference latency on mobile devices for responsive visual and audio guidance",
-
-            "Built modular components in TypeScript for camera streaming, overlay rendering, and inference, enabling scalable extension to new exercise types",
+            "Built React Native app for real-time exercise form correction using TensorFlow Lite and VisionCamera",
+            "Achieved <50 ms inference latency for responsive visual and audio guidance on mobile devices",
+            "Developed modular TypeScript components for scalable extension to new exercise types"
         ]
     },
     {
@@ -57,9 +55,9 @@ export const experiences = [{
         start: "Feb 2025",
         end: "May 2025",
         bullets: [
-            "Engineered a CNN-based DNA classifier, improving accuracy by 7% over Hidden Markov Model baselines",
-            "Reduced model training time by 15% through optimized data balancing and GPU batching",
-            "Automated Dockerized ETL pipelines with Python, pandas, NumPy, and TensorFlow/Keras, reducing preprocessing effort by 80%"
+            "Engineered CNN-based DNA classifier, improving accuracy by 7% over baseline models",
+            "Reduced training time by 15% through optimized data balancing and GPU batching",
+            "Automated Dockerized ETL pipelines, reducing preprocessing effort by 80%"
         ]
     },
     {
@@ -68,9 +66,9 @@ export const experiences = [{
         start: "Jan 2025",
         end: "May 2025",
         bullets: [
-            "Forecasted ingredient demand using ARIMA, cutting over-purchasing by 15% (~$10K savings)",
-            "Automated SQL-to-Power BI pipeline with AWS S3 integration, reducing reporting latency by 30%",
-            "Conducted A/B testing for procurement strategies, improving cost-forecast reliability"
+            "Forecasted ingredient demand using ARIMA, reducing over-purchasing by 15% (~$10K savings)",
+            "Automated SQL-to-Power BI pipeline with AWS S3, reducing reporting latency by 30%",
+            "Conducted A/B testing for procurement strategies, improving forecast reliability"
         ]
     },
     {
@@ -79,8 +77,8 @@ export const experiences = [{
         start: "May 2024",
         end: "Dec 2024",
         bullets: [
-            "Designed recommendation algorithms with collaborative filtering, boosting click-through rates by 10% within the first quarter",
-            "Deployed Airflow-based retraining pipelines on AWS EC2, improving deployment reliability by 30%",
+            "Designed recommendation algorithms with collaborative filtering, boosting CTR by 10%",
+            "Deployed Airflow-based retraining pipelines on AWS EC2, improving reliability by 30%",
             "Optimized Django REST APIs using Docker, reducing response latency by 30%"
         ]
     },
@@ -90,9 +88,9 @@ export const experiences = [{
         start: "Apr 2024",
         end: "Dec 2024",
         bullets: [
-            "Analyzed 15K+ POS and inventory records using pandas and Hadoop to optimize procurement, reducing food costs by 12% (~$4.8K savings)",
+            "Analyzed 15K+ POS records to optimize procurement, reducing food costs by 12% (~$4.8K savings)",
             "Developed Power BI/Tableau dashboards for KPI visualization, accelerating decision-making by 30%",
-            "Automated Excel/VBA reporting processes, cutting manual reporting time by 25%"
+            "Automated Excel/VBA reporting processes, cutting manual time by 25%"
         ]
     },
     {
@@ -101,16 +99,22 @@ export const experiences = [{
         start: "Jan 2022",
         end: "Jun 2023",
         bullets: [
-            "Developed predictive maintenance models using sensor and machine log data (vibration, temperature, usage hours) to forecast equipment failures, reducing downtime by 20%",
-            "Built real-time operations dashboard using Python, Flask, and SQL for monitoring machine health, throughput, and anomaly detection",
-            "Engineered ETL pipelines to integrate and clean heterogeneous datasets from machine logs, service reports, and production records, improving analysis efficiency by 30%",
-            "Partnered with operations and sales teams to design data-driven insights for optimizing spare parts procurement and maintenance scheduling"
+            "Developed predictive maintenance models using sensor data, reducing downtime by 20%",
+            "Built real-time dashboard using Python, Flask, and SQL for machine health monitoring",
+            "Engineered ETL pipelines integrating heterogeneous datasets, improving efficiency by 30%"
         ]
     }
 ];
 
 // Projects (3–6 recommended)
 export const projects = [{
+        title: "MediGuard AI - Healthcare Fraud Detection",
+        description: "Multi-agent AI healthcare fraud detection system using Google ADK & Gemini 2.5. Built Agent 1 (Identity & Claims Fraud Detection), Next.js frontend with real-time workflow visualization, FastAPI backend, and custom ADK FunctionTools. Detects identity misuse, billing fraud, and discharge blockers with sequential agent workflow.",
+        tech: ["Google ADK", "Gemini 2.5", "Next.js", "FastAPI", "Python", "TypeScript", "Tailwind CSS", "Pandas"],
+        repo: "https://github.com/paritosh100/MediGuard-AI/tree/v1",
+        live: ""
+    },
+    {
         title: "EchoHealth: Safe Healthcare Voice Agent",
         description: "Voice-first medical information assistant powered by LiveKit WebRTC and OpenAI Realtime API. Provides evidence-based health information exclusively from MEDLINE sources with safety-first design, always recommending professional healthcare consultation. Features RAG system with FAISS vector search and inline citations.",
         tech: ["Python", "LiveKit", "OpenAI Realtime", "React", "FAISS", "RAG", "Flask", "WebRTC"],

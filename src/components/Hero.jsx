@@ -19,9 +19,19 @@ export default function Hero() {
         <div className="hero-copy">
           <h1 className="hero-title">
             {identity.name}
-            <span className="hero-title-accent"> — {identity.title}</span>
+            <span className="hero-title-accent"> - {identity.title}</span>
           </h1>
-          <p className="hero-intro">{identity.shortIntro}</p>
+          <p className="hero-intro">
+            {identity.shortIntro}{' '}
+            <a 
+              href="https://github.com/paritosh100/MediGuard-AI/tree/v1" 
+              className="hero-capsule"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Kaggle Course Capstone Project
+            </a>
+          </p>
           <div className="hero-actions">
             <a href="/PARITOSH_GANDRE.pdf" className="btn primary" target="_blank" rel="noopener noreferrer">
   Download Resume

@@ -24,7 +24,7 @@ export default function Hero() {
           <p className="hero-intro">
             {identity.shortIntro}{' '}
             <a 
-              href="https://github.com/paritosh100/MediGuard-AI/tree/v1" 
+              href="https://youtu.be/szNQj8By6nU?si=w1lElktr-YsBqtTn" 
               className="hero-capsule"
               target="_blank" 
               rel="noopener noreferrer"

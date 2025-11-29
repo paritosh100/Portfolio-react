@@ -107,82 +107,101 @@ export const experiences = [{
 ];
 
 // Projects (3–6 recommended)
-export const projects = [{
+export const projects = [
+    {
+        title: "Clinical Trial Statistical Analysis Project (ACTG + Simulated Data)",
+        description: "End to end clinical data analysis workflow including data cleaning, variable derivation, TFL style baseline tables, logistic regression, and CD4 trajectory visualizations. Built using R with a structure similar to Statistical Programmer workflows in clinical research.",
+        tech: ["R Programming", "Clinical Trial Analysis", "Statistical Data Analysis", "CDISC Standard", "BioStatistics"],
+        repo: "https://github.com/paritosh100/Clinical-trial-statistical-Analysis/tree/master",
+        live: "",
+        image: "../public/imgs/km_plot_ggplot.png"
+    },
+    {
         title: "MediGuard AI - Healthcare Fraud Detection",
         description: "Multi-agent AI healthcare fraud detection system using Google ADK & Gemini 2.5. Built Agent 1 (Identity & Claims Fraud Detection), Next.js frontend with real-time workflow visualization, FastAPI backend, and custom ADK FunctionTools. Detects identity misuse, billing fraud, and discharge blockers with sequential agent workflow.",
         tech: ["Google ADK", "Gemini 2.5", "Next.js", "FastAPI", "Python", "TypeScript", "Tailwind CSS", "Pandas"],
         repo: "https://github.com/paritosh100/MediGuard-AI/tree/v1",
-        live: ""
+        live: "https://youtu.be/szNQj8By6nU",
+        image: "../public/imgs/mediguard.png"
     },
     {
         title: "EchoHealth: Safe Healthcare Voice Agent",
         description: "Voice-first medical information assistant powered by LiveKit WebRTC and OpenAI Realtime API. Provides evidence-based health information exclusively from MEDLINE sources with safety-first design, always recommending professional healthcare consultation. Features RAG system with FAISS vector search and inline citations.",
         tech: ["Python", "LiveKit", "OpenAI Realtime", "React", "FAISS", "RAG", "Flask", "WebRTC"],
         repo: "https://github.com/paritosh100/EchoHealth--A-safe-healthcare-voice-agent",
-        live: ""
+        live: "https://www.linkedin.com/posts/paritosh-gandre_datascience-machinelearning-llm-activity-7388967848271945728-yRUk?utm_source=share&utm_medium=member_desktop&rcm=ACoAACriTFwBZHJ4g7EmpFvS38xqbrk7WxokjqE",
+        image: "../public/imgs/echohealth.png"
     },
     {
         title: "Multi-AI Agent Project Planner",
         description: "Collaborative AI system where multiple specialized agents (Planner, Estimator, Allocator) work together to create intelligent project plans. Uses CrewAI framework to transform plain-text requirements into context-aware task breakdowns with realistic time estimates and smart resource allocation.",
         tech: ["Python", "CrewAI", "OpenAI GPT-4", "Streamlit", "Multi-Agent Systems"],
         repo: "https://github.com/paritosh100/Product-Planning-Multi-Agent",
-        live: ""
-    },
+        live: "https://www.linkedin.com/posts/paritosh-gandre_datascience-aiengineering-agenticai-activity-7387133312571449345-rSBs?utm_source=share&utm_medium=member_desktop&rcm=ACoAACriTFwBZHJ4g7EmpFvS38xqbrk7WxokjqE",
+        image: "../public/imgs/project_planner.png"},
     {
         title: "Real-Time Voice RAG Assistant",
         description: "Full-stack voice-first AI assistant using LiveKit WebRTC for real-time communication and OpenAI Realtime API for multimodal voice responses. Features RAG over indexed documents with FAISS vector search, ensuring answers are strictly grounded in provided knowledge base. Built with React frontend and Python backend.",
         tech: ["Python", "LiveKit", "OpenAI Realtime", "React", "FAISS", "RAG", "Flask"],
-        repo: "https://github.com/paritosh100/livekit-voice-agenta",
-        live: ""
+        repo: "https://github.com/paritosh100/livekit-voice-agent",
+        live: "",
+        image: "../public/imgs/livekit.png"
     },
     {
         title: "iPSC Differentiation Outcome Predictor",
         description: "Gene-expression based ML models predicting stem-cell differentiation outcomes with SHAP explainability and PCA visualization. Deployed as a Streamlit web app.",
         tech: ["Python", "XGBoost", "RandomForest", "SHAP", "Streamlit"],
         repo: "https://github.com/paritosh100/ipsc-differentiation-predictor",
-        live: "https://ipsc-differentiation-predictor.streamlit.app/"
+        live: "https://ipsc-differentiation-predictor.streamlit.app/",
+        image: "../public/imgs/ipsc.png"
     },
     {
         title: "Revenue Risk Radar – Customer Churn Prediction & Monitoring",
         description: "Automated MLOps pipeline predicting customer churn using LightGBM with Prefect, Evidently, and Streamlit for drift monitoring and retraining automation.",
         tech: ["Python", "LightGBM", "Prefect", "Evidently", "Streamlit"],
         repo: "https://github.com/paritosh100/Revenue-Risk-Radar",
-        live: ""
+        live: "",
+        image: "../public/imgs/revenue_risk.png"
     },
     {
         title: "Healthcare Monitoring System",
         description: "FastAPI + Dash system for heart and diabetes risk prediction using ensemble ML models with real-time dashboards and model performance tracking.",
         tech: ["FastAPI", "Dash", "XGBoost", "SQLite"],
         repo: "https://github.com/paritosh100/Healthcare-Monitoring-System-with-Comprehensive-Dashboard",
-        live: ""
+        live: "",
+        image: "../public/imgs/health_dash.png"
     },
     {
         title: "Genomic Sequence Classification (CNN–HMM Hybrid)",
         description: "Compared deep CNNs with probabilistic HMMs for DNA sequence classification. Achieved 97% accuracy on motif-based synthetic data and analyzed interpretability tradeoffs.",
         tech: ["Python", "TensorFlow", "PyTorch", "HMM", "scikit-learn"],
         repo: "https://github.com/paritosh100/genomic-sequence-classification",
-        live: ""
+        live: "",
+        image: "../public/imgs/genome.png"
     },
     {
         title: "Pose Corrector App (React Native + MediaPipe)",
         description: "Cross-platform mobile app detecting exercise form and posture using on-device MediaPipe and TensorFlow Lite models. Achieved sub-50ms inference latency.",
         tech: ["React Native", "MediaPipe", "TensorFlow Lite"],
         repo: "https://github.com/paritosh100/Pose-Corrector-Expo-App",
-        live: ""
+        live: "",
+        image: "../public/imgs/pose.png"
     },
     {
         title: "AWS 3-Tier Architecture Project",
         description: "End-to-end cloud data pipeline using AWS S3, Lambda, RDS, and EC2 simulating scalable ETL, analytics, and API architecture with Terraform and CI/CD deployment.",
         tech: ["AWS", "Lambda", "RDS", "S3", "Terraform", "CI/CD"],
         repo: "https://github.com/paritosh100/AWS-3-Tier-Architecture-Project",
-        live: ""
+        live: "",
+        image: "../public/imgs/aws.png"
     },
     {
         title: "Water Quality Analysis using Sentinel-2 Satellite Imagery",
         description: "Applied remote sensing and ML to evaluate chlorophyll, turbidity, and salinity indices across Indian water bodies. Random Forest achieved 94% accuracy in classifying water quality.",
         tech: ["Python", "Sentinel-2", "RandomForest", "GDAL", "scikit-learn"],
-        repo: "https://github.com/paritosh100/Water-Quality-Analysis",
-        live: ""
+        repo: "https://github.com/paritosh100/Water-Quality-analysis-using-Satellite-Images",
+        live: "",
+        image: "../public/imgs/water_quality.png"
     },
 
 ];

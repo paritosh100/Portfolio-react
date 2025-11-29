@@ -114,7 +114,7 @@ export const projects = [
         tech: ["R Programming", "Clinical Trial Analysis", "Statistical Data Analysis", "CDISC Standard", "BioStatistics"],
         repo: "https://github.com/paritosh100/Clinical-trial-statistical-Analysis/tree/master",
         live: "",
-        image: "../public/imgs/km_plot_ggplot.png"
+        image: "../imgs/km_plot_ggplot.png"
     },
     {
         title: "MediGuard AI - Healthcare Fraud Detection",
@@ -122,7 +122,7 @@ export const projects = [
         tech: ["Google ADK", "Gemini 2.5", "Next.js", "FastAPI", "Python", "TypeScript", "Tailwind CSS", "Pandas"],
         repo: "https://github.com/paritosh100/MediGuard-AI/tree/v1",
         live: "https://youtu.be/szNQj8By6nU",
-        image: "../public/imgs/mediguard.png"
+        image: "../imgs/mediguard.png"
     },
     {
         title: "EchoHealth: Safe Healthcare Voice Agent",
@@ -130,7 +130,7 @@ export const projects = [
         tech: ["Python", "LiveKit", "OpenAI Realtime", "React", "FAISS", "RAG", "Flask", "WebRTC"],
         repo: "https://github.com/paritosh100/EchoHealth--A-safe-healthcare-voice-agent",
         live: "https://www.linkedin.com/posts/paritosh-gandre_datascience-machinelearning-llm-activity-7388967848271945728-yRUk?utm_source=share&utm_medium=member_desktop&rcm=ACoAACriTFwBZHJ4g7EmpFvS38xqbrk7WxokjqE",
-        image: "../public/imgs/echohealth.png"
+        image: "../imgs/echohealth.png"
     },
     {
         title: "Multi-AI Agent Project Planner",
@@ -138,14 +138,14 @@ export const projects = [
         tech: ["Python", "CrewAI", "OpenAI GPT-4", "Streamlit", "Multi-Agent Systems"],
         repo: "https://github.com/paritosh100/Product-Planning-Multi-Agent",
         live: "https://www.linkedin.com/posts/paritosh-gandre_datascience-aiengineering-agenticai-activity-7387133312571449345-rSBs?utm_source=share&utm_medium=member_desktop&rcm=ACoAACriTFwBZHJ4g7EmpFvS38xqbrk7WxokjqE",
-        image: "../public/imgs/project_planner.png"},
+        image: "../imgs/project_planner.png"},
     {
         title: "Real-Time Voice RAG Assistant",
         description: "Full-stack voice-first AI assistant using LiveKit WebRTC for real-time communication and OpenAI Realtime API for multimodal voice responses. Features RAG over indexed documents with FAISS vector search, ensuring answers are strictly grounded in provided knowledge base. Built with React frontend and Python backend.",
         tech: ["Python", "LiveKit", "OpenAI Realtime", "React", "FAISS", "RAG", "Flask"],
         repo: "https://github.com/paritosh100/livekit-voice-agent",
         live: "",
-        image: "../public/imgs/livekit.png"
+        image: "../imgs/livekit.png"
     },
     {
         title: "iPSC Differentiation Outcome Predictor",
@@ -153,7 +153,7 @@ export const projects = [
         tech: ["Python", "XGBoost", "RandomForest", "SHAP", "Streamlit"],
         repo: "https://github.com/paritosh100/ipsc-differentiation-predictor",
         live: "https://ipsc-differentiation-predictor.streamlit.app/",
-        image: "../public/imgs/ipsc.png"
+        image: "../imgs/ipsc.png"
     },
     {
         title: "Revenue Risk Radar – Customer Churn Prediction & Monitoring",
@@ -161,7 +161,7 @@ export const projects = [
         tech: ["Python", "LightGBM", "Prefect", "Evidently", "Streamlit"],
         repo: "https://github.com/paritosh100/Revenue-Risk-Radar",
         live: "",
-        image: "../public/imgs/revenue_risk.png"
+        image: "../imgs/revenue_risk.png"
     },
     {
         title: "Healthcare Monitoring System",
@@ -169,7 +169,7 @@ export const projects = [
         tech: ["FastAPI", "Dash", "XGBoost", "SQLite"],
         repo: "https://github.com/paritosh100/Healthcare-Monitoring-System-with-Comprehensive-Dashboard",
         live: "",
-        image: "../public/imgs/health_dash.png"
+        image: "../imgs/health_dash.png"
     },
     {
         title: "Genomic Sequence Classification (CNN–HMM Hybrid)",
@@ -177,7 +177,7 @@ export const projects = [
         tech: ["Python", "TensorFlow", "PyTorch", "HMM", "scikit-learn"],
         repo: "https://github.com/paritosh100/genomic-sequence-classification",
         live: "",
-        image: "../public/imgs/genome.png"
+        image: "../imgs/genome.png"
     },
     {
         title: "Pose Corrector App (React Native + MediaPipe)",
@@ -185,7 +185,7 @@ export const projects = [
         tech: ["React Native", "MediaPipe", "TensorFlow Lite"],
         repo: "https://github.com/paritosh100/Pose-Corrector-Expo-App",
         live: "",
-        image: "../public/imgs/pose.png"
+        image: "../imgs/pose.png"
     },
     {
         title: "AWS 3-Tier Architecture Project",
@@ -193,7 +193,7 @@ export const projects = [
         tech: ["AWS", "Lambda", "RDS", "S3", "Terraform", "CI/CD"],
         repo: "https://github.com/paritosh100/AWS-3-Tier-Architecture-Project",
         live: "",
-        image: "../public/imgs/aws.png"
+        image: "../imgs/aws.png"
     },
     {
         title: "Water Quality Analysis using Sentinel-2 Satellite Imagery",
@@ -201,7 +201,7 @@ export const projects = [
         tech: ["Python", "Sentinel-2", "RandomForest", "GDAL", "scikit-learn"],
         repo: "https://github.com/paritosh100/Water-Quality-analysis-using-Satellite-Images",
         live: "",
-        image: "../public/imgs/water_quality.png"
+        image: "../imgs/water_quality.png"
     },
 
 ];

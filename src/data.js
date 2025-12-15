@@ -7,7 +7,7 @@ export const identity = {
     email: "paritoshkrcg@gmail.com", // For footer/contact
     location: "Kent, OH", // Optional
     resumeUrl: "/PARITOSH_GANDRE.pdf", // Keep path; replace file in /public
-    profileImage: "/profile.png", // Replace file in /public
+    profileImage: "/LINKEDIN-PROFILE-PIC.png", // Replace file in /public
     shortIntro: `I’m a data scientist with a strong foundation in statistics, machine learning, and biomedical data analysis. My work spans genomic research, healthcare analytics, and AI-driven decision systems from building CNN and HMM models for DNA sequence classification to developing end-to-end dashboards for clinical and operational monitoring. I enjoy designing interpretable models, validating them with real-world evidence, and deploying scalable pipelines using Python, SQL, and cloud tools. My focus is on translating complex biological and clinical datasets into insights that support data-driven research and better patient outcomes`,
 };
 
@@ -41,12 +41,12 @@ export const skills = {
 export const experiences = [{
         company: "Kent State University",
         role: "Research Assistant",
-        start: "July 2025",
-        end: "Present",
+        start: "Jul 2025",
+        end: "Dec 2025",
         bullets: [
-            "Built React Native app for real-time exercise form correction using TensorFlow Lite and VisionCamera",
-            "Achieved <50 ms inference latency for responsive visual and audio guidance on mobile devices",
-            "Developed modular TypeScript components for scalable extension to new exercise types"
+            "Built a real-time mobile application for exercise form correction using React Native, TensorFlow Lite, and VisionCamera, enabling on-device pose analysis and feedback",
+            "Optimized on-device inference pipelines to achieve sub-50 ms latency, supporting smooth visual and audio guidance during live exercise sessions",
+            "Designed modular, type-safe TypeScript components to support scalable addition of new exercises, pose rules, and feedback logic"
         ]
     },
     {
@@ -108,6 +108,23 @@ export const experiences = [{
 
 // Projects (3–6 recommended)
 export const projects = [
+    {
+    title: "ReShape City AI – Multimodal Urban Design Intelligence",
+    description: "AI-powered urban planning tool that analyzes street and satellite images using Gemini 3 Pro. Extracts spatial metrics, generates walkability and safety indices, creates before-and-after redesign visuals, and provides an interactive urban planner chatbot. Built with multimodal AI, computer vision, generative modeling, and a React-based dashboard.",
+    tech: [
+        "Multimodal AI",
+        "Computer Vision",
+        "Generative AI",
+        "Urban Analytics",
+        "React & TypeScript",
+        "Google AI Studio",
+        "Data Modeling",
+        "Geospatial Reasoning"
+    ],
+    repo: "https://github.com/paritosh100/ReShape-City-AI",
+    live: "https://aistudio.google.com/apps/drive/1sWtrK84i3JC6sYjL2Qbznz0-XtfA3WSv?fullscreenApplet=true&showPreview=true&showAssistant=true",
+    image: "../imgs/reshape.png"
+},
     {
         title: "Clinical Trial Statistical Analysis Project (ACTG + Simulated Data)",
         description: "End to end clinical data analysis workflow including data cleaning, variable derivation, TFL style baseline tables, logistic regression, and CD4 trajectory visualizations. Built using R with a structure similar to Statistical Programmer workflows in clinical research.",

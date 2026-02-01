@@ -8,7 +8,7 @@ export const identity = {
     location: "Kent, OH", // Optional
     resumeUrl: "/PARITOSH_GANDRE.pdf", // Keep path; replace file in /public
     profileImage: "/LINKEDIN-PROFILE-PIC.png", // Replace file in /public
-    shortIntro: `I’m a data scientist with a strong foundation in statistics, machine learning, and biomedical data analysis. My work spans genomic research, healthcare analytics, and AI-driven decision systems from building CNN and HMM models for DNA sequence classification to developing end-to-end dashboards for clinical and operational monitoring. I enjoy designing interpretable models, validating them with real-world evidence, and deploying scalable pipelines using Python, SQL, and cloud tools. My focus is on translating complex biological and clinical datasets into insights that support data-driven research and better patient outcomes`,
+    shortIntro: `Data scientist focused on machine learning and biomedical data, with experience in genomics and healthcare analytics. Builds interpretable models and scalable Python and SQL pipelines to turn complex biological data into actionable insights.`,
 };
 
 // About + skills
@@ -222,7 +222,42 @@ export const projects = [
     },
 
 ];
-export const certificates = [{
+export const certificates = [
+    {
+    title: "5-Day AI Agents Intensive Course",
+    issuer: "Google x Kaggle",
+    issued: "Dec 2025",
+    credentialId: "",
+    link: "https://www.kaggle.com/certification/badges/paritoshgandre/105",
+    skills: [
+        "AI Agents",
+        "Multi-Agent Systems",
+        "LLM Orchestration",
+        "Prompt Engineering",
+        "Agent Design Patterns",
+        "Tool Calling",
+        "Applied Generative AI"
+    ],
+    relatedRepo: "https://github.com/paritosh100/5-days-ai-agent-intensive-course"
+},
+    {
+    title: "Python for Data Science, AI & Development",
+    issuer: "IBM",
+    issued: "Dec 2025",
+    // credentialId: "DKM8H1I7EA9X",
+    link: "https://www.coursera.org/account/accomplishments/verify/DKM8H1I7EA9X",
+    skills: [
+        "Python",
+        "Data Science",
+
+        "Data Analysis",
+        "Data Visualization",
+        "APIs",
+        "AI Foundations"
+    ],
+    // relatedRepo: "https://github.com/paritosh100"
+},
+    {
         title: "AWS Cloud Technical Essentials",
         issuer: "Amazon Web Services (AWS)",
         issued: "Oct 2025",

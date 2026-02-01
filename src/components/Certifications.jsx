@@ -1,4 +1,5 @@
-import { certificates } from "../data.js";
+import { motion } from 'framer-motion';
+import { certificates } from '../data.js';
 
 export default function Certificates() {
   if (!certificates || certificates.length === 0) return null;
@@ -6,40 +7,78 @@ export default function Certificates() {
   return (
     <div className="container">
       <header className="section-header center-text">
-        <h2>Certificates</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Certifications
+        </motion.h2>
       </header>
 
       <div className="cert-grid">
-        {certificates.map((c, i) => (
-          <article key={i} className="cert-item">
-            <h3 className="cert-title">{c.title}</h3>
-            <p className="muted">{c.issuer} • {c.issued}</p>
+        {certificates.map((cert, i) => (
+          <motion.article
+            key={i}
+            className="cert-item"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.6, delay: i * 0.05 }}
+          >
+            <h3 className="cert-title">{cert.title}</h3>
+            <p className="muted mono" style={{ fontSize: '0.85rem' }}>
+              {cert.issuer} • {cert.issued}
+            </p>
 
-            {c.credentialId && (
-              <p className="tiny muted">Credential ID: {c.credentialId}</p>
+            {cert.credentialId && (
+              <p className="tiny muted">Credential ID: {cert.credentialId}</p>
             )}
 
-            {c.skills && c.skills.length > 0 && (
+            {cert.skills && cert.skills.length > 0 && (
               <div className="cert-skills">
-                {c.skills.map((s, j) => (
-                  <span key={j} className="skill-chip">{s}</span>
+                {cert.skills.map((skill, j) => (
+                  <span key={j} className="skill-chip">
+                    {skill}
+                  </span>
                 ))}
               </div>
             )}
 
             <div className="cert-links">
-              {c.link && (
-                <a className="link" href={c.link} target="_blank" rel="noopener noreferrer">
+              {cert.link && (
+                <a
+                  className="link"
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: 'var(--accent-teal)',
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                  }}
+                >
                   View Credential →
                 </a>
               )}
-              {c.relatedRepo && (
-                <a className="link" href={c.relatedRepo} target="_blank" rel="noopener noreferrer">
+              {cert.relatedRepo && (
+                <a
+                  className="link"
+                  href={cert.relatedRepo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: 'var(--accent-cyan)',
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                  }}
+                >
                   Related Repo →
                 </a>
               )}
             </div>
-          </article>
+          </motion.article>
         ))}
       </div>
     </div>

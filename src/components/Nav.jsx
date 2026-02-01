@@ -1,70 +1,88 @@
-import { useEffect, useState } from "react";
-import { nav } from "../data.js";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { nav } from '../data.js';
+import { Menu, X } from 'lucide-react';
 
-export default function Nav({ active, toggleTheme, theme }) {
-  const [open, setOpen] = useState(false);
+export default function Nav({ active }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onKey = (e) => e.key === "Escape" && setOpen(false);
-    const onResize = () => { if (window.innerWidth >= 768) setOpen(false); };
-    window.addEventListener("keydown", onKey);
-    window.addEventListener("resize", onResize);
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      window.removeEventListener("resize", onResize);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
     };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLinkClick = () => setOpen(false);
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
+  };
 
   return (
-    <header className={`topnav ${open ? "open" : ""}`} role="navigation" aria-label="Main">
-      {/* Desktop nav (centered) */}
-      <nav className="nav-desktop" aria-label="Primary">
+    <motion.nav
+      className={`topnav ${scrolled ? 'scrolled' : ''} ${isOpen ? 'open' : ''}`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="nav-desktop">
         <ul className="navlist">
           {nav.map((item) => (
             <li key={item.id}>
-              <a href={`#${item.id}`} className="btn nav">
+              <a
+                href={`#${item.id}`}
+                className={active === item.id ? 'active' : ''}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.id);
+                }}
+              >
                 {item.label}
               </a>
             </li>
           ))}
         </ul>
-      </nav>
+      </div>
 
-      {/* Theme toggle (always visible) */}
-      {/* <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-        {theme === "dark" ? <FaSun size={18} /> : <FaMoon size={18} />}
-      </button> */}
-
-      {/* Mobile hamburger */}
       <button
         className="hamburger"
+        onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
-        aria-expanded={open}
-        aria-controls="mobile-menu"
-        onClick={() => setOpen((v) => !v)}
       >
-        {open ? (
-          <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M18.3 5.71L12 12l6.3 6.29-1.41 1.41L10.59 13.41 4.29 19.7 2.88 18.29 9.17 12 2.88 5.71 4.29 4.3l6.3 6.29 6.29-6.3 1.42 1.42z"/></svg>
-        ) : (
-          <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
-        )}
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      {/* Mobile menu (only shows when open) */}
-      <nav id="mobile-menu" className="nav-mobile" aria-label="Mobile">
-        <ul className="navlist-mobile" role="menu">
-          {nav.map((item) => (
-            <li key={item.id} role="none">
-              <a role="menuitem" href={`#${item.id}`} className={active === item.id ? "active" : ""} onClick={handleLinkClick}>
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+      {isOpen && (
+        <motion.div
+          className="nav-mobile"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3 }}
+        >
+          <ul className="navlist-mobile">
+            {nav.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={`#${item.id}`}
+                  className={active === item.id ? 'active' : ''}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.id);
+                  }}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      )}
+    </motion.nav>
   );
 }

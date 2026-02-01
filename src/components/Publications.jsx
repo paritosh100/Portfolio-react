@@ -1,4 +1,5 @@
-import { publications } from "../data.js";
+import { motion } from 'framer-motion';
+import { publications } from '../data.js';
 
 export default function Publications() {
   if (!publications || publications.length === 0) return null;
@@ -6,26 +7,49 @@ export default function Publications() {
   return (
     <div className="container">
       <header className="section-header center-text">
-        <h2>Publications</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Publications
+        </motion.h2>
       </header>
 
-      <div className="stack gap-m">
-        {publications.map((p, i) => (
-          <article key={i} className="card pub-card">
-            <h3 className="card-title">{p.title}</h3>
-            <p className="muted">{p.venue} — {p.year}</p>
-            {p.summary && <p className="pub-summary">{p.summary}</p>}
-            {p.link && (
+      <div className="stack">
+        {publications.map((pub, i) => (
+          <motion.article
+            key={i}
+            className="card pub-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
+          >
+            <h3 className="card-title">{pub.title}</h3>
+            <p className="muted mono" style={{ fontSize: '0.9rem' }}>
+              {pub.venue} — {pub.year}
+            </p>
+            {pub.summary && <p className="pub-summary">{pub.summary}</p>}
+            {pub.link && (
               <a
                 className="link"
-                href={p.link}
+                href={pub.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{
+                  color: 'var(--accent-teal)',
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  marginTop: '1rem',
+                  display: 'inline-block',
+                }}
               >
                 View Publication →
               </a>
             )}
-          </article>
+          </motion.article>
         ))}
       </div>
     </div>

@@ -38,7 +38,20 @@ export const skills = {
 
 
 // Experience (add as many as you like)
-export const experiences = [{
+export const experiences = [
+    {
+        company: "OViiE AI (STELLA™)",
+        role: "Sr. Data Scientist / Machine Learning Engineer",
+        start: "Nov 2024",
+        end: "Present",
+        bullets: [
+            "Architected real-time speech translation pipeline achieving P50 latency of 416ms and P99 of 487ms across 9 language pairs with 100% translation success rate; designed end-to-end system (ASR → NLP → TTS) supporting 25+ concurrent rooms and sub-100ms WebSocket message propagation",
+            "Built comprehensive SLO validation framework testing intent detection, concurrent sessions, multi-language stress, and progressive load scenarios (2→25 users); verified system stability under realistic load with 123/126 SLOs passed, identifying language-pair bottlenecks (French P50: 1025ms, Japanese P50: 835ms) for optimization prioritization",
+            "Optimized inference pipelines and real-time routing through NVIDIA NIM translation endpoint integration; stress-tested 90 translation requests across Spanish, French, German, Japanese, and Arabic achieving 100% reliability and <2000ms P99 under 3-concurrent load",
+            "Established latency monitoring and bottleneck analysis practices, documenting exact performance characteristics for each language pair and concurrent user tier to inform architectural decisions and product roadmap"
+        ]
+    },
+    {
         company: "Kent State University",
         role: "Research Assistant",
         start: "Jul 2025",

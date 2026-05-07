@@ -42,7 +42,7 @@ export const experiences = [
     {
         company: "OViiE AI (STELLA™)",
         role: "Sr. Data Scientist / Machine Learning Engineer",
-        start: "Nov 2024",
+        start: "Nov 2025",
         end: "Present",
         bullets: [
             "Architected real-time speech translation pipeline achieving P50 latency of 416ms and P99 of 487ms across 9 language pairs with 100% translation success rate; designed end-to-end system (ASR → NLP → TTS) supporting 25+ concurrent rooms and sub-100ms WebSocket message propagation",

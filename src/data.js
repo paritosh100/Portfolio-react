@@ -40,8 +40,8 @@ export const skills = {
 // Experience (add as many as you like)
 export const experiences = [
     {
-        company: "OViiE AI",
-        role: "Machine Learning Engineer",
+        company: "OViiE AI (STELLA™)",
+        role: "Sr. Data Scientist / Machine Learning Engineer",
         start: "Nov 2025",
         end: "Present",
         bullets: [

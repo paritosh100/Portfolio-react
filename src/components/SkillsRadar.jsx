@@ -6,13 +6,26 @@ export default function SkillsRadar() {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: '-100px' });
   const [hoveredSkill, setHoveredSkill] = useState(null);
+  const [themeVersion, setThemeVersion] = useState(0);
+
+  // MutationObserver to trigger dynamic redraws on Dark/Light toggle
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setThemeVersion((prev) => prev + 1);
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class', 'data-theme'],
+    });
+    return () => observer.disconnect();
+  }, []);
 
   const skills = [
-    { name: 'Python & ML', value: 95, color: '#00d9ff' },
-    { name: 'Healthcare AI', value: 90, color: '#00ffcc' },
-    { name: 'LLMs & Agents', value: 88, color: '#00d9ff' },
-    { name: 'Cloud & MLOps', value: 85, color: '#00ffcc' },
-    { name: 'Data Visualization', value: 82, color: '#00d9ff' },
+    { name: 'Python & ML', value: 95 },
+    { name: 'Healthcare AI', value: 90 },
+    { name: 'LLMs & Agents', value: 88 },
+    { name: 'Cloud & MLOps', value: 85 },
+    { name: 'Data Visualization', value: 82 },
   ];
 
   useEffect(() => {
@@ -26,8 +39,17 @@ export default function SkillsRadar() {
     const centerY = canvas.height / 2;
     const maxRadius = Math.min(centerX, centerY) - 40;
 
+    // Read colors dynamically from CSS variables
+    const styles = getComputedStyle(document.documentElement);
+    const accent = styles.getPropertyValue('--accent-primary').trim() || '#DE005F';
+    const accentGlow = styles.getPropertyValue('--accent-glow').trim() || 'rgba(222, 0, 95, 0.15)';
+    const textPrimary = styles.getPropertyValue('--text-primary').trim() || '#1A1A1A';
+    const textMuted = styles.getPropertyValue('--text-muted').trim() || '#888888';
+    const border = styles.getPropertyValue('--border-color').trim() || '#E5E5E3';
+    const bg = styles.getPropertyValue('--bg-secondary').trim() || '#FFFFFF';
+
     let animationProgress = 0;
-    const animationDuration = 1500;
+    const animationDuration = 1000; // Snappier draw
     let startTime = null;
 
     function drawRadar(progress) {
@@ -39,16 +61,16 @@ export default function SkillsRadar() {
         const radius = (maxRadius / levels) * i;
         ctx.beginPath();
         ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-        ctx.strokeStyle = 'rgba(0, 217, 255, 0.1)';
+        ctx.strokeStyle = border;
         ctx.lineWidth = 1;
         ctx.stroke();
 
-        // Draw level labels
+        // Level labels
         if (i === levels) {
-          ctx.fillStyle = 'rgba(160, 160, 160, 0.6)';
-          ctx.font = '10px JetBrains Mono';
+          ctx.fillStyle = textMuted;
+          ctx.font = '10px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
-          ctx.fillText('100%', centerX, centerY - radius - 5);
+          ctx.fillText('100%', centerX, centerY - radius - 8);
         }
       }
 
@@ -63,22 +85,22 @@ export default function SkillsRadar() {
         ctx.beginPath();
         ctx.moveTo(centerX, centerY);
         ctx.lineTo(x, y);
-        ctx.strokeStyle = 'rgba(0, 217, 255, 0.2)';
+        ctx.strokeStyle = border;
         ctx.lineWidth = 1;
         ctx.stroke();
 
-        // Skill label
-        const labelX = centerX + Math.cos(angle) * (maxRadius + 25);
-        const labelY = centerY + Math.sin(angle) * (maxRadius + 25);
+        // Skill labels (typographically premium Cormorant italic display or clean Instrument sans)
+        const labelX = centerX + Math.cos(angle) * (maxRadius + 26);
+        const labelY = centerY + Math.sin(angle) * (maxRadius + 26);
         
-        ctx.fillStyle = skill.color;
-        ctx.font = '12px Space Grotesk';
+        ctx.fillStyle = textPrimary;
+        ctx.font = '500 11.5px Instrument Sans, sans-serif';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(skill.name, labelX, labelY);
       });
 
-      // Draw skill polygon
+      // Draw skill polygon path
       ctx.beginPath();
       skills.forEach((skill, index) => {
         const angle = angleStep * index - Math.PI / 2;
@@ -94,19 +116,16 @@ export default function SkillsRadar() {
       });
       ctx.closePath();
 
-      // Fill
-      const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, maxRadius);
-      gradient.addColorStop(0, 'rgba(0, 217, 255, 0.3)');
-      gradient.addColorStop(1, 'rgba(0, 255, 204, 0.1)');
-      ctx.fillStyle = gradient;
+      // Polygon Fill ( Editorial semi-transparent overlay )
+      ctx.fillStyle = accentGlow;
       ctx.fill();
 
-      // Stroke
-      ctx.strokeStyle = '#00d9ff';
-      ctx.lineWidth = 2;
+      // Polygon Outline
+      ctx.strokeStyle = accent;
+      ctx.lineWidth = 1.5;
       ctx.stroke();
 
-      // Draw points
+      // Draw Points
       skills.forEach((skill, index) => {
         const angle = angleStep * index - Math.PI / 2;
         const value = (skill.value / 100) * maxRadius * progress;
@@ -114,11 +133,11 @@ export default function SkillsRadar() {
         const y = centerY + Math.sin(angle) * value;
 
         ctx.beginPath();
-        ctx.arc(x, y, 5, 0, Math.PI * 2);
-        ctx.fillStyle = skill.color;
+        ctx.arc(x, y, 4.5, 0, Math.PI * 2);
+        ctx.fillStyle = accent;
         ctx.fill();
-        ctx.strokeStyle = '#0a0a0a';
-        ctx.lineWidth = 2;
+        ctx.strokeStyle = bg;
+        ctx.lineWidth = 1.5;
         ctx.stroke();
       });
     }
@@ -128,7 +147,7 @@ export default function SkillsRadar() {
       const elapsed = timestamp - startTime;
       animationProgress = Math.min(elapsed / animationDuration, 1);
 
-      // Easing function
+      // Emil's ease-out curve mapping
       const eased = 1 - Math.pow(1 - animationProgress, 3);
       drawRadar(eased);
 
@@ -138,32 +157,34 @@ export default function SkillsRadar() {
     }
 
     requestAnimationFrame(animate);
-  }, [isInView, skills]);
+  }, [isInView, themeVersion]); // Re-run when appearing or when class theme transitions
 
   return (
     <motion.div
       ref={containerRef}
-      initial={{ opacity: 0, scale: 0.8 }}
+      initial={{ opacity: 0, scale: 0.96 }}
       animate={isInView ? { opacity: 1, scale: 1 } : {}}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
       style={{
-        background: 'rgba(18, 18, 18, 0.7)',
-        backdropFilter: 'blur(16px)',
-        border: '1px solid rgba(0, 217, 255, 0.2)',
-        borderRadius: '16px',
-        padding: '2rem',
+        background: 'var(--bg-secondary)',
+        border: '1px solid var(--border-color)',
+        borderRadius: '8px',
+        padding: '24px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: '1.5rem',
+        gap: '24px',
+        boxShadow: 'var(--shadow-sm)',
+        transition: 'background var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base)',
       }}
     >
       <h3
         style={{
-          fontFamily: 'Space Grotesk, sans-serif',
-          fontSize: '1.5rem',
-          fontWeight: 700,
-          color: '#00d9ff',
+          fontFamily: 'Cormorant Garamond, Georgia, serif',
+          fontSize: '1.45rem',
+          fontWeight: 400,
+          fontStyle: 'italic',
+          color: 'var(--text-primary)',
           margin: 0,
         }}
       >
@@ -172,30 +193,25 @@ export default function SkillsRadar() {
       
       <canvas
         ref={canvasRef}
-        width={400}
-        height={400}
+        width={380}
+        height={380}
         style={{
           maxWidth: '100%',
           height: 'auto',
         }}
       />
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
         {skills.map((skill, index) => (
           <div
             key={index}
             onMouseEnter={() => setHoveredSkill(skill.name)}
             onMouseLeave={() => setHoveredSkill(null)}
+            className="skill-chip"
             style={{
-              padding: '0.5rem 1rem',
-              borderRadius: '999px',
-              background: hoveredSkill === skill.name ? 'rgba(0, 217, 255, 0.2)' : 'rgba(0, 217, 255, 0.1)',
-              border: `1px solid ${skill.color}`,
-              color: skill.color,
-              fontFamily: 'JetBrains Mono, monospace',
-              fontSize: '0.85rem',
+              borderColor: hoveredSkill === skill.name ? 'var(--accent-primary)' : 'var(--border-color)',
+              color: hoveredSkill === skill.name ? 'var(--accent-primary)' : 'var(--text-secondary)',
               cursor: 'pointer',
-              transition: 'all 0.3s ease',
               transform: hoveredSkill === skill.name ? 'translateY(-2px)' : 'translateY(0)',
             }}
           >

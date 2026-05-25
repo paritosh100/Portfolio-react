@@ -1,44 +1,50 @@
 import { motion } from 'framer-motion';
 import { identity, social } from '../data.js';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 import TerminalComponent from './TerminalComponent.jsx';
 
 export default function Hero() {
+  const easeOut = [0.23, 1, 0.32, 1]; // Emil's custom easing
+
   return (
     <div className="hero container">
       <div className="hero-grid">
+        
+        {/* Profile Image Column (Left) */}
         <motion.div
           className="hero-photo"
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6, ease: easeOut }}
         >
           <img
             src={identity.profileImage}
             alt={`${identity.name} profile photo`}
             className="avatar"
             loading="eager"
-            width="280"
-            height="280"
+            width="380"
+            height="475"
           />
         </motion.div>
 
+        {/* Copy Column (Right) */}
         <div className="hero-copy">
-          <motion.h1
-            className="hero-title"
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6, ease: easeOut, delay: 0.1 }}
           >
-            <span className="gradient-text">{identity.name}</span>
-            <span className="hero-title-accent">{identity.title}</span>
-          </motion.h1>
+            <h1 className="hero-title">
+              <span className="gradient-text">{identity.name}</span>
+              <span className="hero-title-accent">{identity.title}</span>
+            </h1>
+          </motion.div>
 
           <motion.p
             className="hero-intro"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.6, ease: easeOut, delay: 0.2 }}
           >
             {identity.shortIntro}{' '}
             <a
@@ -55,25 +61,18 @@ export default function Hero() {
 
           <motion.div
             className="hero-actions"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.6, ease: easeOut, delay: 0.4 }}
           >
             <a
-              href="/PARITOSH_GANDRE.pdf"
+              href={identity.resumeUrl}
               className="btn primary"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <FileText size={15} style={{ marginRight: '8px' }} />
               Download Resume
-            </a>
-            <a
-              href="/PARITOSH_GANDRE_CV.pdf"
-              className="btn secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Download CV
             </a>
 
             <div className="hero-icons">
@@ -83,7 +82,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub size={24} />
+                <Github size={18} />
               </a>
               <a
                 href={social.linkedin}
@@ -91,7 +90,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin size={24} />
+                <Linkedin size={18} />
               </a>
               <a
                 href={social.email}
@@ -99,11 +98,12 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaEnvelope size={24} />
+                <Mail size={18} />
               </a>
             </div>
           </motion.div>
         </div>
+
       </div>
     </div>
   );

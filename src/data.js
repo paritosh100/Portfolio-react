@@ -3,12 +3,12 @@
 // Basic identity
 export const identity = {
     name: "Paritosh Gandre", // Replace with your name
-    title: "Data Scientist", // Your headline/title
+    title: "Machine Learning Engineer", // Your headline/title
     email: "paritoshkrcg@gmail.com", // For footer/contact
     location: "Kent, OH", // Optional
     resumeUrl: "/PARITOSH_GANDRE.pdf", // Keep path; replace file in /public
     profileImage: "/LINKEDIN-PROFILE-PIC.png", // Replace file in /public
-    shortIntro: `Data scientist focused on machine learning and biomedical data, with experience in genomics and healthcare analytics. Builds interpretable models and scalable Python and SQL pipelines to turn complex biological data into actionable insights.`,
+    shortIntro: `Machine Learning Engineer with 2+ years building production real-time systems. Currently leading ML architecture for sub-second latency voice translation platform. Expertise in inference optimization, open-source ML frameworks, and stress-testing systems at scale.`,
 };
 
 // About + skills
@@ -45,10 +45,10 @@ export const experiences = [
         start: "Nov 2025",
         end: "Present",
         bullets: [
-            "Architected real-time speech translation pipeline achieving P50 latency of 416ms and P99 of 487ms across 9 language pairs with 100% translation success rate; designed end-to-end system (ASR → NLP → TTS) supporting 25+ concurrent rooms and sub-100ms WebSocket message propagation",
-            "Built comprehensive SLO validation framework testing intent detection, concurrent sessions, multi-language stress, and progressive load scenarios (2→25 users); verified system stability under realistic load with 123/126 SLOs passed, identifying language-pair bottlenecks (French P50: 1025ms, Japanese P50: 835ms) for optimization prioritization",
-            "Optimized inference pipelines and real-time routing through NVIDIA NIM translation endpoint integration; stress-tested 90 translation requests across Spanish, French, German, Japanese, and Arabic achieving 100% reliability and <2000ms P99 under 3-concurrent load",
-            "Established latency monitoring and bottleneck analysis practices, documenting exact performance characteristics for each language pair and concurrent user tier to inform architectural decisions and product roadmap"
+            "Architecting end-to-end inference pipelines (ASR to neural machine translation to TTS) optimized for sub-second latency; leading technical decisions on inference infrastructure and model deployment strategies",
+            "Designed and implemented stress-testing framework and observability systems to measure real-time ML performance at scale; established latency monitoring and bottleneck analysis practices that reduced mean inference time by 12% through targeted optimization",
+            "Evaluating and selecting open-source models and frameworks (NLLB-200, CTranslate2, Piper) for cost-performance tradeoffs across multiple language pairs and NVIDIA GPU targets",
+            "Leading Phase 2 self-hosted architecture design for multi-tenant SaaS deployment, enabling scalable inference without vendor dependency"
         ]
     },
     {
@@ -237,6 +237,14 @@ export const projects = [
 ];
 export const certificates = [
     {
+        title: "Fundamentals of Accelerated Computing with CUDA Python",
+        issuer: "NVIDIA",
+        issued: "Mar 2026",
+        credentialId: "0cOz8eCeS2SY1qJlPyYxJQ",
+        link: "https://www.linkedin.com/in/paritosh-gandre/overlay/Certifications/973035469/treasury/?profileId=ACoAACriTFwBZHJ4g7EmpFvS38xqbrk7WxokjqE",
+        skills: ["CUDA", "Python", "Accelerated Computing", "GPU Programming"]
+    },
+    {
     title: "5-Day AI Agents Intensive Course",
     issuer: "Google x Kaggle",
     issued: "Dec 2025",
@@ -344,8 +352,8 @@ export const publications = [{
     venue: "IEEE - 2023 International Conference on Data Science and Network Security (ICDSNS)",
     year: "2023",
     link: "https://ieeexplore.ieee.org/document/10245131",
-    summary: `This study applies remote sensing and machine learning to assess water quality in four saline water bodies like the Arabian Sea, Bay of Bengal, Lonar Lake, and the southern coastal Arabian Sea. Using Sentinel-2 satellite imagery, spectral indices for chlorophyll-a, turbidity, and salinity were computed, and five classifiers (Random Forest, KNN, SVM, Decision Tree, and Naive Bayes) were compared. Random Forest achieved the highest accuracy (94%) in classifying water quality as good or poor. Results show the Bay of Bengal is less contaminated and saline, whereas the Arabian Sea and Lonar Lake exhibit higher salinity and chlorophyll-a concentrations (25–30 mg m⁻³). The findings highlight the potential of integrating satellite imagery with ML for scalable water-quality monitoring.`
-
+    summary: `This study applies remote sensing and machine learning to assess water quality in four saline water bodies like the Arabian Sea, Bay of Bengal, Lonar Lake, and the southern coastal Arabian Sea. Using Sentinel-2 satellite imagery, spectral indices for chlorophyll-a, turbidity, and salinity were computed, and five classifiers (Random Forest, KNN, SVM, Decision Tree, and Naive Bayes) were compared. Random Forest achieved the highest accuracy (94%) in classifying water quality as good or poor. Results show the Bay of Bengal is less contaminated and saline, whereas the Arabian Sea and Lonar Lake exhibit higher salinity and chlorophyll-a concentrations (25–30 mg m⁻³). The findings highlight the potential of integrating satellite imagery with ML for scalable water-quality monitoring.`,
+    image: "../imgs/water_quality_paper.png"
 }];
 
 // Social links

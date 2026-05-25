@@ -68,4 +68,4 @@ test-results.xml
 # Local screenshots or images not meant for git
 __screenshots__/
 # Local PDFs (resume etc.) that will be replaced on deploy
-
+scratch/

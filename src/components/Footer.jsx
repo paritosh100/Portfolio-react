@@ -1,25 +1,27 @@
 import { motion } from 'framer-motion';
 import { social } from '../data.js';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
+  const easeOut = [0.23, 1, 0.32, 1]; // Emil's custom easing
+
   return (
     <footer className="footer">
       <div className="footer-content container">
         <motion.div
           className="footer-links"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5, ease: easeOut }}
         >
           <a
-            href={`mailto:${social.email}`}
+            href={social.email}
             aria-label="Email"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaEnvelope size={18} />
+            <Mail size={15} />
             <span>Email</span>
           </a>
           {social.github && (
@@ -29,7 +31,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub size={18} />
+              <Github size={15} />
               <span>GitHub</span>
             </a>
           )}
@@ -40,19 +42,20 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin size={18} />
+              <Linkedin size={15} />
               <span>LinkedIn</span>
             </a>
           )}
         </motion.div>
+
         <motion.p
           className="footer-copy"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.5, ease: easeOut, delay: 0.15 }}
         >
-          © {new Date().getFullYear()} Paritosh Gandre • Built with React & Three.js
+          © {new Date().getFullYear()} Paritosh Gandre • Crafted with React & Framer Motion
         </motion.p>
       </div>
     </footer>

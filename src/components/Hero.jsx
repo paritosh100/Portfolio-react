@@ -27,18 +27,20 @@ export default function Hero() {
           />
 
           {/* Open to Work Banner */}
-          <motion.a
-            href={`mailto:${identity.email}?subject=Let's%20Work%20Together`}
-            className="open-to-work-badge"
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: easeOut, delay: 0.3 }}
-            whileHover={{ scale: 1.05 }}
           >
-            <Briefcase size={16} />
-            <span>Open to work</span>
-            <Mail size={14} />
-          </motion.a>
+            <a
+              href={`mailto:${identity.email}?subject=Let's%20Work%20Together`}
+              className="open-to-work-badge"
+            >
+              <Briefcase size={16} />
+              <span>Open to work</span>
+              <Mail size={14} />
+            </a>
+          </motion.div>
         </motion.div>
 
         {/* Copy Column (Right) */}

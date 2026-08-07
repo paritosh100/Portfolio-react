@@ -1292,7 +1292,8 @@ a:hover {
 .open-to-work-badge {
   position: absolute;
   top: 16px;
-  right: 16px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1310,10 +1311,11 @@ a:hover {
   transition: all var(--transition-fast);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
 }
 
 .open-to-work-badge:hover {
-  transform: translateY(-2px);
+  transform: translateX(-50%) translateY(-2px);
   box-shadow: 0 6px 24px var(--accent-glow);
 }
 

@@ -114,7 +114,7 @@ export default function Nav({ active }) {
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             <a
-              href={`mailto:${identity.email}?subject=${encodeURIComponent("Let's Work Together")}`}
+              href={`mailto:${identity.email}?subject=Let%27s%20Work%20Together&body=Hi%20Paritosh%2C%0A%0AI%27m%20interested%20in%20discussing%20a%20potential%20opportunity.`}
               className="nav-open-to-work"
               title="Open to work - Contact me"
             >

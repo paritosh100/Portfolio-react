@@ -1287,6 +1287,44 @@ a:hover {
 }
 
 /* ---------------------------------------------------------
+   14.5. OPEN TO WORK BANNER
+   --------------------------------------------------------- */
+.open-to-work-banner {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-deep));
+  border-bottom: 1px solid var(--accent-primary);
+  padding: 12px 0;
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.open-to-work-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.open-to-work-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  font-family: 'Instrument Sans', sans-serif;
+  letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
+}
+
+.open-to-work-link:hover .open-to-work-content {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+/* ---------------------------------------------------------
    15. ACCESSIBILITY / REDUSED MOTION
    --------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {

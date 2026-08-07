@@ -1287,41 +1287,34 @@ a:hover {
 }
 
 /* ---------------------------------------------------------
-   14.5. OPEN TO WORK BANNER
+   14.5. OPEN TO WORK BADGE (on hero image)
    --------------------------------------------------------- */
-.open-to-work-banner {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-deep));
-  border-bottom: 1px solid var(--accent-primary);
-  padding: 12px 0;
-  box-shadow: 0 4px 12px var(--accent-glow);
-}
-
-.open-to-work-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-
-.open-to-work-content {
+.open-to-work-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-deep));
   color: white;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-family: 'Instrument Sans', sans-serif;
   letter-spacing: 0.02em;
+  text-decoration: none;
+  z-index: 10;
+  box-shadow: 0 4px 16px var(--accent-glow);
   transition: all var(--transition-fast);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.open-to-work-link:hover .open-to-work-content {
-  transform: scale(1.02);
-  filter: brightness(1.1);
+.open-to-work-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px var(--accent-glow);
 }
 
 /* ---------------------------------------------------------

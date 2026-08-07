@@ -7,7 +7,7 @@ export const identity = {
     email: "paritoshkrcg@gmail.com", // For footer/contact
     phone: "+1 330-554-8445",
     location: "Mountain View, CA", // Optional
-    resumeUrl: "/PARITOSH_GANDRE.pdf", // Keep path; replace file in /public
+    resumeUrl: "/PARITOSH-GANDRE.pdf", // Keep path; replace file in /public
     profileImage: "/LINKEDIN-PROFILE-PIC.png", // Replace file in /public
     portfolioUrl: "https://paritosh-gandre.vercel.app",
     shortIntro: `Senior Machine Learning Engineer with 3+ years building production real-time voice AI systems. Architecting sub-1000ms latency inference pipelines (ASR to neural machine translation to TTS) serving tens of thousands of concurrent users at 99.9% SLA. Expertise in LLM-as-judge evaluation, inference optimization, and multi-tenant production infrastructure.`,

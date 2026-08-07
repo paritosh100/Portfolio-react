@@ -8,7 +8,6 @@ import Skills from './components/Skills.jsx';
 import Certificates from './components/Certifications.jsx';
 import Publications from './components/Publications.jsx';
 import Footer from './components/Footer.jsx';
-import OpenToWork from './components/OpenToWork.jsx';
 import InteractiveBackground from './components/InteractiveBackground.jsx';
 import { nav, education } from './data.js';
 import { Analytics } from '@vercel/analytics/react';
@@ -41,8 +40,6 @@ export default function App() {
   return (
     <>
       <InteractiveBackground />
-
-      <OpenToWork />
 
       <Nav active={active} />
       

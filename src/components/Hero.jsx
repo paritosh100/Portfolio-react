@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { identity, social } from '../data.js';
-import { Github, Linkedin, Mail, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText, Briefcase } from 'lucide-react';
 import TerminalComponent from './TerminalComponent.jsx';
 
 export default function Hero() {
@@ -25,6 +25,20 @@ export default function Hero() {
             width="380"
             height="475"
           />
+
+          {/* Open to Work Banner */}
+          <motion.a
+            href={`mailto:${identity.email}?subject=Let's%20Work%20Together`}
+            className="open-to-work-badge"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: easeOut, delay: 0.3 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <Briefcase size={16} />
+            <span>Open to work</span>
+            <Mail size={14} />
+          </motion.a>
         </motion.div>
 
         {/* Copy Column (Right) */}

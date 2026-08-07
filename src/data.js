@@ -3,52 +3,58 @@
 // Basic identity
 export const identity = {
     name: "Paritosh Gandre", // Replace with your name
-    title: "Machine Learning Engineer", // Your headline/title
+    title: "Senior Machine Learning Engineer", // Your headline/title
     email: "paritoshkrcg@gmail.com", // For footer/contact
-    location: "Kent, OH", // Optional
+    phone: "+1 330-554-8445",
+    location: "Mountain View, CA", // Optional
     resumeUrl: "/PARITOSH_GANDRE.pdf", // Keep path; replace file in /public
     profileImage: "/LINKEDIN-PROFILE-PIC.png", // Replace file in /public
-    shortIntro: `Machine Learning Engineer with 2+ years building production real-time systems. Currently leading ML architecture for sub-second latency voice translation platform. Expertise in inference optimization, open-source ML frameworks, and stress-testing systems at scale.`,
+    portfolioUrl: "https://paritosh-gandre.vercel.app",
+    shortIntro: `Senior Machine Learning Engineer with 3+ years building production real-time voice AI systems. Architecting sub-1000ms latency inference pipelines (ASR to neural machine translation to TTS) serving tens of thousands of concurrent users at 99.9% SLA. Expertise in LLM-as-judge evaluation, inference optimization, and multi-tenant production infrastructure.`,
 };
 
 // About + skills
 export const about = {
-    bio: `I’m a data scientist with a strong foundation in statistics, machine learning, and biomedical data analysis. My work spans genomic research, healthcare analytics, and AI-driven decision systems from building CNN and HMM models for DNA sequence classification to developing end-to-end dashboards for clinical and operational monitoring. I enjoy designing interpretable models, validating them with real-world evidence, and deploying scalable pipelines using Python, SQL, and cloud tools. My focus is on translating complex biological and clinical datasets into insights that support data-driven research and better patient outcomes`,
+    bio: `I'm a Machine Learning Engineer with 3+ years of production experience building real-time voice AI and LLM systems at scale. My work spans architecting end-to-end inference pipelines (speech-to-text, neural machine translation, speech synthesis) with sub-1000ms latency, building LLM-as-judge evaluation harnesses to standardize model selection and release gating, and hardening multi-tenant production infrastructure with row-level security, RBAC, and GDPR-compliant audit trails. I hold an M.S. in Data Science from Kent State University, where my research applied CNN and transformer architectures to genomic sequence classification. My focus is on bridging ML research into reliable, observable production systems.`,
     skills: [
 
     ]
 };
 
 export const skills = {
-    "Core Technical": [
-        "Python", "R", "SQL", "Pandas", "NumPy", "Scikit-learn",
-        "TensorFlow", "PyTorch", "Keras", "Statistics", "Data Visualization"
+    "ML & Voice AI": [
+        "PyTorch", "TensorFlow", "CUDA", "LLM-as-judge evaluation",
+        "Multi-model evaluation harnesses", "Neural machine translation",
+        "Text-to-speech", "Speech recognition", "Inference optimization",
+        "Model quantization", "RAG", "FAISS", "Multi-agent orchestration"
     ],
-    "ML & Analytics": [
-        "Machine Learning", "Deep Learning", "Predictive Modeling",
-        "Feature Engineering", "Model Interpretability (SHAP, LIME)",
-        "A/B Testing", "Applied Statistics", "Healthcare Analytics",
-        "Bioinformatics", "Genomics Data Analysis"
+    "Backend & Infrastructure": [
+        "Python", "TypeScript", "FastAPI", "PostgreSQL", "Row-Level Security",
+        "SQL", "Docker", "Terraform", "LiveKit WebRTC", "CTranslate2"
     ],
-    "Cloud & Tools": [
-        "AWS (S3, Lambda, SageMaker, Redshift)", "Prefect", "Airflow",
-        "Docker", "Power BI", "Tableau", "Streamlit", "Git/GitHub"
+    "Cloud & Observability": [
+        "AWS (EC2, RDS, IAM)", "Google Cloud (BigQuery, Cloud Functions)",
+        "GitHub Actions CI/CD", "Datadog observability", "Apache Airflow"
+    ],
+    "Reliability & Compliance": [
+        "GDPR-compliant audit design", "RBAC", "TOTP-based MFA",
+        "Automated testing (unit/integration/e2e)"
     ]
 };
 
 
 // Experience (add as many as you like)
-export const experiences = [
-    {
+export const experiences = [{
         company: "OViiE AI (STELLA™)",
-        role: "Sr. Data Scientist / Machine Learning Engineer",
+        role: "Senior Machine Learning Engineer",
         start: "Nov 2025",
         end: "Present",
         bullets: [
-            "Architecting end-to-end inference pipelines (ASR to neural machine translation to TTS) optimized for sub-second latency; leading technical decisions on inference infrastructure and model deployment strategies",
-            "Designed and implemented stress-testing framework and observability systems to measure real-time ML performance at scale; established latency monitoring and bottleneck analysis practices that reduced mean inference time by 12% through targeted optimization",
-            "Evaluating and selecting open-source models and frameworks (NLLB-200, CTranslate2, Piper) for cost-performance tradeoffs across multiple language pairs and NVIDIA GPU targets",
-            "Leading Phase 2 self-hosted architecture design for multi-tenant SaaS deployment, enabling scalable inference without vendor dependency"
+            "Architected a production end-to-end ML inference system integrating cloud speech-to-text, custom translation model deployment, and real-time speech synthesis over WebRTC, maintaining sub-1000ms p95 latency for tens of thousands of concurrent users at 99.9% SLA",
+            "Built a multi-model evaluation harness using LLM-as-judge methodology across 12+ language pairs, scoring adequacy, fluency, register, and glossary preservation to standardize model selection and release gating; identified and resolved failure modes (hallucination, sentence-drop) informing model migration",
+            "Reduced TTS synthesis costs 80% through an LRU caching strategy with 95%+ cache hit rates, delivering multi-five-figure annual infrastructure savings without quality loss",
+            "Hardened multi-tenant access control with PostgreSQL Row-Level Security, TOTP-based MFA, and role-based access control across a service-role write architecture, achieving zero cross-org data-isolation incidents; built GDPR-compliant audit trails",
+            "Achieved 90%+ test coverage across database, API, and frontend layers with 2,000+ automated tests, maintaining zero customer-facing billing or production errors in a live multi-tenant environment"
         ]
     },
     {
@@ -120,24 +126,39 @@ export const experiences = [
 ];
 
 // Projects (3–6 recommended)
-export const projects = [
+export const projects = [{
+        title: "InsightBridge – Multi-Agent LLM Orchestration Platform",
+        description: "Multi-agent LLM orchestration platform with a 6-agent async pipeline (analysis, synthesis, refinement, validation) built on FastAPI and Next.js with Pydantic-validated contracts. Optimized LLM response latency 4x via feature-flagged backend routing (OpenAI single-call vs. multi-agent Gemini) with content-safety guardrails across dual LLM backends. Deployed as a two-service production app (Vercel frontend, Docker/Cloud Run backend).",
+        tech: ["Python", "FastAPI", "Next.js", "TypeScript", "OpenAI", "Gemini", "Pydantic", "Docker", "Google Cloud Run"],
+        repo: "https://github.com/paritosh100/InsightBridge",
+        live: "",
+        image: "../imgs/insightbridge.png" // TODO: replace with an InsightBridge screenshot
+    },
     {
-    title: "ReShape City AI – Multimodal Urban Design Intelligence",
-    description: "AI-powered urban planning tool that analyzes street and satellite images using Gemini 3 Pro. Extracts spatial metrics, generates walkability and safety indices, creates before-and-after redesign visuals, and provides an interactive urban planner chatbot. Built with multimodal AI, computer vision, generative modeling, and a React-based dashboard.",
-    tech: [
-        "Multimodal AI",
-        "Computer Vision",
-        "Generative AI",
-        "Urban Analytics",
-        "React & TypeScript",
-        "Google AI Studio",
-        "Data Modeling",
-        "Geospatial Reasoning"
-    ],
-    repo: "https://github.com/paritosh100/ReShape-City-AI",
-    live: "https://aistudio.google.com/apps/drive/1sWtrK84i3JC6sYjL2Qbznz0-XtfA3WSv?fullscreenApplet=true&showPreview=true&showAssistant=true",
-    image: "../imgs/reshape.png"
-},
+        title: "Marathi TTS Text Normalization",
+        description: "LLM-based text normalization pipeline converting raw, multi-script Marathi text into phonetically accurate, speech-ready Devanagari with pause annotations for downstream TTS synthesis. Built dataset generation infrastructure using the Gemini API with rate-limit handling, checkpointing, and fault tolerance, producing 1000+ Alpaca-style instruction examples for fine-tuning voice normalization models.",
+        tech: ["Python", "Gemini API", "TTS", "NLP", "Dataset Generation"],
+        repo: "https://github.com/paritosh100/marathi-tts-text-normalization",
+        live: "",
+        image: "../imgs/marathi-tts.png" // TODO: replace with a Marathi TTS screenshot
+    },
+    {
+        title: "ReShape City AI – Multimodal Urban Design Intelligence",
+        description: "AI-powered urban planning tool that analyzes street and satellite images using Gemini 3 Pro. Extracts spatial metrics, generates walkability and safety indices, creates before-and-after redesign visuals, and provides an interactive urban planner chatbot. Built with multimodal AI, computer vision, generative modeling, and a React-based dashboard.",
+        tech: [
+            "Multimodal AI",
+            "Computer Vision",
+            "Generative AI",
+            "Urban Analytics",
+            "React & TypeScript",
+            "Google AI Studio",
+            "Data Modeling",
+            "Geospatial Reasoning"
+        ],
+        repo: "https://github.com/paritosh100/ReShape-City-AI",
+        live: "https://aistudio.google.com/apps/drive/1sWtrK84i3JC6sYjL2Qbznz0-XtfA3WSv?fullscreenApplet=true&showPreview=true&showAssistant=true",
+        image: "../imgs/reshape.png"
+    },
     {
         title: "Clinical Trial Statistical Analysis Project (ACTG + Simulated Data)",
         description: "End to end clinical data analysis workflow including data cleaning, variable derivation, TFL style baseline tables, logistic regression, and CD4 trajectory visualizations. Built using R with a structure similar to Statistical Programmer workflows in clinical research.",
@@ -168,7 +189,8 @@ export const projects = [
         tech: ["Python", "CrewAI", "OpenAI GPT-4", "Streamlit", "Multi-Agent Systems"],
         repo: "https://github.com/paritosh100/Product-Planning-Multi-Agent",
         live: "https://www.linkedin.com/posts/paritosh-gandre_datascience-aiengineering-agenticai-activity-7387133312571449345-rSBs?utm_source=share&utm_medium=member_desktop&rcm=ACoAACriTFwBZHJ4g7EmpFvS38xqbrk7WxokjqE",
-        image: "../imgs/project_planner.png"},
+        image: "../imgs/project_planner.png"
+    },
     {
         title: "Real-Time Voice RAG Assistant",
         description: "Full-stack voice-first AI assistant using LiveKit WebRTC for real-time communication and OpenAI Realtime API for multimodal voice responses. Features RAG over indexed documents with FAISS vector search, ensuring answers are strictly grounded in provided knowledge base. Built with React frontend and Python backend.",
@@ -235,8 +257,7 @@ export const projects = [
     },
 
 ];
-export const certificates = [
-    {
+export const certificates = [{
         title: "Fundamentals of Accelerated Computing with CUDA Python",
         issuer: "NVIDIA",
         issued: "Mar 2026",
@@ -245,39 +266,39 @@ export const certificates = [
         skills: ["CUDA", "Python", "Accelerated Computing", "GPU Programming"]
     },
     {
-    title: "5-Day AI Agents Intensive Course",
-    issuer: "Google x Kaggle",
-    issued: "Dec 2025",
-    credentialId: "",
-    link: "https://www.kaggle.com/certification/badges/paritoshgandre/105",
-    skills: [
-        "AI Agents",
-        "Multi-Agent Systems",
-        "LLM Orchestration",
-        "Prompt Engineering",
-        "Agent Design Patterns",
-        "Tool Calling",
-        "Applied Generative AI"
-    ],
-    relatedRepo: "https://github.com/paritosh100/5-days-ai-agent-intensive-course"
-},
+        title: "5-Day AI Agents Intensive Course",
+        issuer: "Google x Kaggle",
+        issued: "Dec 2025",
+        credentialId: "",
+        link: "https://www.kaggle.com/certification/badges/paritoshgandre/105",
+        skills: [
+            "AI Agents",
+            "Multi-Agent Systems",
+            "LLM Orchestration",
+            "Prompt Engineering",
+            "Agent Design Patterns",
+            "Tool Calling",
+            "Applied Generative AI"
+        ],
+        relatedRepo: "https://github.com/paritosh100/5-days-ai-agent-intensive-course"
+    },
     {
-    title: "Python for Data Science, AI & Development",
-    issuer: "IBM",
-    issued: "Dec 2025",
-    // credentialId: "DKM8H1I7EA9X",
-    link: "https://www.coursera.org/account/accomplishments/verify/DKM8H1I7EA9X",
-    skills: [
-        "Python",
-        "Data Science",
+        title: "Python for Data Science, AI & Development",
+        issuer: "IBM",
+        issued: "Dec 2025",
+        // credentialId: "DKM8H1I7EA9X",
+        link: "https://www.coursera.org/account/accomplishments/verify/DKM8H1I7EA9X",
+        skills: [
+            "Python",
+            "Data Science",
 
-        "Data Analysis",
-        "Data Visualization",
-        "APIs",
-        "AI Foundations"
-    ],
-    // relatedRepo: "https://github.com/paritosh100"
-},
+            "Data Analysis",
+            "Data Visualization",
+            "APIs",
+            "AI Foundations"
+        ],
+        // relatedRepo: "https://github.com/paritosh100"
+    },
     {
         title: "AWS Cloud Technical Essentials",
         issuer: "Amazon Web Services (AWS)",

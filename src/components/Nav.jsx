@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { nav } from '../data.js';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { nav, identity } from '../data.js';
+import { Menu, X, Sun, Moon, Briefcase } from 'lucide-react';
 
 export default function Nav({ active }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,15 +105,22 @@ export default function Nav({ active }) {
               </a>
             </li>
           ))}
-          <li style={{ display: 'inline-flex', alignItems: 'center' }}>
+          <li style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', marginLeft: '12px' }}>
             <button
               onClick={toggleTheme}
               className="theme-toggle-btn"
               aria-label="Toggle theme"
-              style={{ marginLeft: '12px' }}
             >
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
             </button>
+            <a
+              href={`mailto:${identity.email}?subject=Let's%20Work%20Together`}
+              className="nav-open-to-work"
+              title="Open to work - Contact me"
+            >
+              <Briefcase size={18} />
+              <span>Open to work</span>
+            </a>
           </li>
         </ul>
       </div>

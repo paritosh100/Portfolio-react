@@ -1287,41 +1287,21 @@ a:hover {
 }
 
 /* ---------------------------------------------------------
-   14.5. OPEN TO WORK BADGE (in navbar)
+   14.5. OPEN TO WORK BANNER (in hero intro)
    --------------------------------------------------------- */
-.nav-open-to-work {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
+.hero-capsule.open-to-work {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-deep));
   color: white;
-  border-radius: var(--radius-sm);
-  font-weight: 500;
-  font-size: 0.75rem;
-  font-family: 'Instrument Sans', sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  box-shadow: 0 2px 8px var(--accent-glow);
-  transition: all var(--transition-fast);
-  cursor: pointer;
+  border: 1px solid var(--accent-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
 }
 
-.nav-open-to-work:hover {
-  transform: translateY(-2px);
+.hero-capsule.open-to-work:hover {
+  transform: translateY(-1px);
   box-shadow: 0 4px 12px var(--accent-glow);
-}
-
-.nav-open-to-work span {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .nav-open-to-work span {
-    display: inline;
-    margin-left: 4px;
-  }
 }
 
 /* ---------------------------------------------------------

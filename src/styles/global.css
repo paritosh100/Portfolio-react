@@ -1287,6 +1287,24 @@ a:hover {
 }
 
 /* ---------------------------------------------------------
+   14.5. OPEN TO WORK BANNER (in hero intro)
+   --------------------------------------------------------- */
+.hero-capsule.open-to-work {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-deep));
+  color: white;
+  border: 1px solid var(--accent-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+}
+
+.hero-capsule.open-to-work:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+/* ---------------------------------------------------------
    15. ACCESSIBILITY / REDUSED MOTION
    --------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {

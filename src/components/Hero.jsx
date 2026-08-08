@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { identity, social } from '../data.js';
-import { Github, Linkedin, Mail, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText, Briefcase } from 'lucide-react';
 import TerminalComponent from './TerminalComponent.jsx';
 
 export default function Hero() {
@@ -54,6 +54,13 @@ export default function Hero() {
               rel="noopener noreferrer"
             >
               Kaggle Course Capstone Project
+            </a>
+            <a
+              href={`mailto:${identity.email}?subject=Let%27s%20Work%20Together`}
+              className="hero-capsule open-to-work"
+            >
+              <Briefcase size={12} style={{ marginRight: '4px' }} />
+              Open to work
             </a>
           </motion.p>
 

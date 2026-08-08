@@ -69,3 +69,6 @@ test-results.xml
 __screenshots__/
 # Local PDFs (resume etc.) that will be replaced on deploy
 scratch/
+
+# IDE / Tool caching
+.atl/

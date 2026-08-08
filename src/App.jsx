@@ -40,7 +40,7 @@ export default function App() {
   return (
     <>
       <InteractiveBackground />
-      
+
       <Nav active={active} />
       
       <main style={{ position: 'relative', zIndex: 10 }}>

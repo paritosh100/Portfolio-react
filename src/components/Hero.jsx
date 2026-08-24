@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { identity, social } from '../data.js';
-import { Github, Linkedin, Mail, FileText, Briefcase, Play } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText, Briefcase, Play, Pause } from 'lucide-react';
 import TerminalComponent from './TerminalComponent.jsx';
 import { useState, useRef } from 'react';
 
@@ -9,11 +9,20 @@ export default function Hero() {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const handlePlayClick = () => {
+  const handlePlayPauseClick = () => {
     if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play();
+        setIsPlaying(true);
+      }
     }
+  };
+
+  const handleVideoPlay = () => {
+    setIsPlaying(true);
   };
 
   const handleVideoPause = () => {
@@ -37,19 +46,20 @@ export default function Hero() {
               src="/portfolio-vid-optimized.mp4"
               alt={`${identity.name} profile video`}
               className="avatar"
-              muted
               loop
               playsInline
               width="380"
               height="475"
+              onPlay={handleVideoPlay}
               onPause={handleVideoPause}
-              onClick={handlePlayClick}
             />
-            {!isPlaying && (
-              <button className="video-play-btn" onClick={handlePlayClick} aria-label="Play video">
-                <Play size={48} />
-              </button>
-            )}
+            <button
+              className="video-play-btn"
+              onClick={handlePlayPauseClick}
+              aria-label={isPlaying ? "Pause video" : "Play video"}
+            >
+              {isPlaying ? <Pause size={48} /> : <Play size={48} />}
+            </button>
           </div>
         </motion.div>
 

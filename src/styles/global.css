@@ -546,7 +546,7 @@ a:hover {
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  border-radius: var(--radius-none); /* Stately sharp edge */
+  border-radius: var(--radius-xl);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-lg);
   position: relative;
@@ -564,6 +564,7 @@ a:hover {
   height: 100%;
   aspect-ratio: 4 / 5;
   border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-xl);
   z-index: 1;
   pointer-events: none;
   transition: transform var(--transition-base);

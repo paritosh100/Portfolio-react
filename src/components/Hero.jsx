@@ -17,11 +17,14 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: easeOut }}
         >
-          <img
-            src={identity.profileImage}
-            alt={`${identity.name} profile photo`}
+          <video
+            src="/portfolio-vid-optimized.mp4"
+            alt={`${identity.name} profile video`}
             className="avatar"
-            loading="eager"
+            autoPlay
+            muted
+            loop
+            playsInline
             width="380"
             height="475"
           />

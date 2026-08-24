@@ -44,6 +44,7 @@ export default function Hero() {
             <video
               ref={videoRef}
               src="/portfolio-vid-optimized.mp4"
+              poster="/thumbnail.jpg"
               alt={`${identity.name} profile video`}
               className="avatar"
               loop

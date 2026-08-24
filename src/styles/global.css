@@ -540,19 +540,58 @@ a:hover {
   position: relative;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+}
+
 .avatar {
   width: 100%;
   max-width: 380px;
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  border-radius: var(--radius-none); /* Stately sharp edge */
+  border-radius: var(--radius-xl);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-lg);
   position: relative;
   z-index: 2;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
+  cursor: pointer;
 }
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all var(--transition-base);
+  box-shadow: 0 8px 32px var(--accent-glow);
+  padding: 0;
+}
+
+.video-play-btn:hover {
+  background: var(--accent-primary-deep);
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 12px 40px var(--accent-glow);
+}
+
+.video-play-btn:active {
+  transform: translate(-50%, -50%) scale(0.97);
+}
+
 
 .hero-photo::after {
   content: "";
@@ -564,6 +603,7 @@ a:hover {
   height: 100%;
   aspect-ratio: 4 / 5;
   border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-xl);
   z-index: 1;
   pointer-events: none;
   transition: transform var(--transition-base);

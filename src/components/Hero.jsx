@@ -1,15 +1,38 @@
 import { motion } from 'framer-motion';
 import { identity, social } from '../data.js';
-import { Github, Linkedin, Mail, FileText, Briefcase } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText, Briefcase, Play, Pause } from 'lucide-react';
 import TerminalComponent from './TerminalComponent.jsx';
+import { useState, useRef } from 'react';
 
 export default function Hero() {
   const easeOut = [0.23, 1, 0.32, 1]; // Emil's custom easing
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayPauseClick = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play();
+        setIsPlaying(true);
+      }
+    }
+  };
+
+  const handleVideoPlay = () => {
+    setIsPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setIsPlaying(false);
+  };
 
   return (
     <div className="hero container">
       <div className="hero-grid">
-        
+
         {/* Profile Image Column (Left) */}
         <motion.div
           className="hero-photo"
@@ -17,14 +40,28 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: easeOut }}
         >
-          <img
-            src={identity.profileImage}
-            alt={`${identity.name} profile photo`}
-            className="avatar"
-            loading="eager"
-            width="380"
-            height="475"
-          />
+          <div className="video-container">
+            <video
+              ref={videoRef}
+              src="/portfolio-vid-optimized.mp4"
+              poster="/thumbnail.jpg"
+              alt={`${identity.name} profile video`}
+              className="avatar"
+              loop
+              playsInline
+              width="380"
+              height="475"
+              onPlay={handleVideoPlay}
+              onPause={handleVideoPause}
+            />
+            <button
+              className="video-play-btn"
+              onClick={handlePlayPauseClick}
+              aria-label={isPlaying ? "Pause video" : "Play video"}
+            >
+              {isPlaying ? <Pause size={48} /> : <Play size={48} />}
+            </button>
+          </div>
         </motion.div>
 
         {/* Copy Column (Right) */}

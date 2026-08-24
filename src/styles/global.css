@@ -540,6 +540,12 @@ a:hover {
   position: relative;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+}
+
 .avatar {
   width: 100%;
   max-width: 380px;
@@ -552,6 +558,38 @@ a:hover {
   position: relative;
   z-index: 2;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
+  cursor: pointer;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all var(--transition-base);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.video-play-btn:hover {
+  background: white;
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.video-play-btn svg {
+  stroke: currentColor;
+  fill: none;
 }
 
 .hero-photo::after {

@@ -1,15 +1,29 @@
 import { motion } from 'framer-motion';
 import { identity, social } from '../data.js';
-import { Github, Linkedin, Mail, FileText, Briefcase } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText, Briefcase, Play } from 'lucide-react';
 import TerminalComponent from './TerminalComponent.jsx';
+import { useState, useRef } from 'react';
 
 export default function Hero() {
   const easeOut = [0.23, 1, 0.32, 1]; // Emil's custom easing
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handleVideoPause = () => {
+    setIsPlaying(false);
+  };
 
   return (
     <div className="hero container">
       <div className="hero-grid">
-        
+
         {/* Profile Image Column (Left) */}
         <motion.div
           className="hero-photo"
@@ -17,17 +31,26 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: easeOut }}
         >
-          <video
-            src="/portfolio-vid-optimized.mp4"
-            alt={`${identity.name} profile video`}
-            className="avatar"
-            autoPlay
-            muted
-            loop
-            playsInline
-            width="380"
-            height="475"
-          />
+          <div className="video-container">
+            <video
+              ref={videoRef}
+              src="/portfolio-vid-optimized.mp4"
+              alt={`${identity.name} profile video`}
+              className="avatar"
+              muted
+              loop
+              playsInline
+              width="380"
+              height="475"
+              onPause={handleVideoPause}
+              onClick={handlePlayClick}
+            />
+            {!isPlaying && (
+              <button className="video-play-btn" onClick={handlePlayClick} aria-label="Play video">
+                <Play size={48} />
+              </button>
+            )}
+          </div>
         </motion.div>
 
         {/* Copy Column (Right) */}

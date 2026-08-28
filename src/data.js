@@ -136,10 +136,10 @@ export const projects = [{
     },
     {
         title: "Marathi TTS Text Normalization",
-        description: "LLM-based text normalization pipeline converting raw, multi-script Marathi text into phonetically accurate, speech-ready Devanagari with pause annotations for downstream TTS synthesis. Built dataset generation infrastructure using the Gemini API with rate-limit handling, checkpointing, and fault tolerance, producing 1000+ Alpaca-style instruction examples for fine-tuning voice normalization models.",
-        tech: ["Python", "Gemini API", "TTS", "NLP", "Dataset Generation"],
+        description: "Text normalization pipeline for low-resource-language TTS, fine-tuning Llama-3.1-8B via QLoRA to convert raw multi-script Marathi into speech-ready Devanagari. Built a two-metric evaluation pipeline (normalizer WER + round-trip WER) that decoupled model quality from synthesis noise and caught a 47% WER regression in code review before production. Diagnosed a silent reproducibility regression in a third-party TTS library degrading 75% of real inputs, isolating the root cause via version-by-version checkpoint comparison and shipping a full fix. Instrumented all experiment runs in MLflow for a queryable audit trail across model and config changes.",
+        tech: ["Python", "Llama-3.1-8B", "QLoRA", "MLflow", "TTS", "NLP", "Evaluation"],
         repo: "https://github.com/paritosh100/marathi-tts-text-normalization",
-        live: "",
+        live: "https://marathi-tts-text-normalization.vercel.app/",
         image: "../imgs/marathi-tts.png" // TODO: replace with a Marathi TTS screenshot
     },
     {

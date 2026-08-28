@@ -50,11 +50,12 @@ export const experiences = [{
         start: "Nov 2025",
         end: "Present",
         bullets: [
-            "Architected a production end-to-end ML inference system integrating cloud speech-to-text, custom translation model deployment, and real-time speech synthesis over WebRTC, maintaining sub-1000ms p95 latency for tens of thousands of concurrent users at 99.9% SLA",
-            "Built a multi-model evaluation harness using LLM-as-judge methodology across 12+ language pairs, scoring adequacy, fluency, register, and glossary preservation to standardize model selection and release gating; identified and resolved failure modes (hallucination, sentence-drop) informing model migration",
-            "Reduced TTS synthesis costs 80% through an LRU caching strategy with 95%+ cache hit rates, delivering multi-five-figure annual infrastructure savings without quality loss",
-            "Hardened multi-tenant access control with PostgreSQL Row-Level Security, TOTP-based MFA, and role-based access control across a service-role write architecture, achieving zero cross-org data-isolation incidents; built GDPR-compliant audit trails",
-            "Achieved 90%+ test coverage across database, API, and frontend layers with 2,000+ automated tests, maintaining zero customer-facing billing or production errors in a live multi-tenant environment"
+            "Shipped 6 production systems end-to-end (database, backend, frontend) within a real-time AI voice translation platform, integrating cloud speech-to-text, custom translation model deployment, and real-time speech synthesis over WebRTC at sub-1000ms end-to-end latency",
+            "Diagnosed a production translation service running under 3% GPU utilization and resolved it via concurrent request handling, dynamic batching, and model quantization, driving 8x throughput and roughly 38% lower infrastructure costs; separately cut P95 inference latency ~30% and raised peak GPU utilization from under 5% to over 60% through model export optimization and batching tuning",
+            "Built an AI-graded multi-model evaluation harness (LLM-as-judge) across multiple language pairs, running A/B tests comparing commercial and self-hosted translation model options and identifying/resolving failure modes (hallucination, sentence-drop) to inform migration to a higher-performing production model",
+            "Reduced TTS synthesis costs 80% (4x fewer redundant synthesis calls) via provider-change-immune LRU caching achieving 95%+ cache hit rates, delivering multi-five-figure annual infrastructure savings",
+            "Hardened multi-tenant security with PostgreSQL Row-Level Security, RBAC, GDPR-compliant audit trails, and TOTP-based MFA across a platform serving dozens of hospitality properties, achieving zero cross-org incidents",
+            "Achieved 90%+ test coverage (2,000+ automated tests) across database, API, and frontend layers, maintaining zero customer-facing billing or production errors in a live multi-tenant environment"
         ]
     },
     {

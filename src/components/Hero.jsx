@@ -85,12 +85,12 @@ export default function Hero() {
           >
             {identity.shortIntro}{' '}
             <a
-              href="https://youtu.be/szNQj8By6nU?si=w1lElktr-YsBqtTn"
+              href="https://marathi-tts-text-normalization.vercel.app/"
               className="hero-capsule"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Kaggle Course Capstone Project
+              Marathi TTS Text Normalization
             </a>
             <a
               href={`mailto:${identity.email}?subject=Let%27s%20Work%20Together`}

@@ -141,7 +141,8 @@ export const projects = [{
         tech: ["Python", "Llama-3.1-8B", "QLoRA", "MLflow", "TTS", "NLP", "Evaluation"],
         repo: "https://github.com/paritosh100/marathi-tts-text-normalization",
         live: "https://marathi-tts-text-normalization.vercel.app/",
-        image: "../imgs/marathi-tts.png" // TODO: replace with a Marathi TTS screenshot
+        image: "../imgs/marathi-tts.png", // TODO: replace with a Marathi TTS screenshot
+        video: "/marathi-tts-demo.mp4" // 720p demo: autoplays muted on card, full audio in modal
     },
     {
         title: "ReShape City AI – Multimodal Urban Design Intelligence",

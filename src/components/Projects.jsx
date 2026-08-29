@@ -53,7 +53,18 @@ function ProjectCard({ project, index, onClick }) {
       {/* Inner refraction border */}
       <div className="project-refraction" />
 
-      {project.image && (
+      {project.video ? (
+        <video
+          className="project-hero project-hero-video"
+          src={project.video}
+          poster={project.image}
+          muted
+          loop
+          autoPlay
+          playsInline
+          preload="metadata"
+        />
+      ) : project.image && (
         <motion.div
           layoutId={`project-image-${index}`}
           className="project-hero"
@@ -153,7 +164,24 @@ export default function Projects() {
                 className="project-modal"
                 transition={{ type: "spring", stiffness: 200, damping: 25 }}
               >
-                {projects[expandedIndex].image && (
+                {projects[expandedIndex].video ? (
+                  <div className="project-modal-hero project-modal-hero-video">
+                    <video
+                      src={projects[expandedIndex].video}
+                      poster={projects[expandedIndex].image}
+                      controls
+                      playsInline
+                      preload="none"
+                    />
+                    <button
+                      className="project-modal-close"
+                      onClick={() => setExpandedIndex(null)}
+                      aria-label="Close project details"
+                    >
+                      <X size={20} />
+                    </button>
+                  </div>
+                ) : projects[expandedIndex].image && (
                   <motion.div
                     layoutId={`project-image-${expandedIndex}`}
                     className="project-modal-hero"

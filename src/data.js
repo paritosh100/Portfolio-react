@@ -8,7 +8,7 @@ export const identity = {
     phone: "+1 330-554-8445",
     location: "Mountain View, CA", // Optional
     resumeUrl: "/PARITOSH-GANDRE.pdf", // Keep path; replace file in /public
-    profileImage: "/LINKEDIN-PROFILE-PIC.png", // Replace file in /public
+    profileImage: "/Linkedin-Profile-picture.png", // Replace file in /public
     portfolioUrl: "https://paritosh-gandre.vercel.app",
     shortIntro: `Senior Machine Learning Engineer with 3+ years building production real-time voice AI systems. Architecting sub-1000ms latency inference pipelines (ASR to neural machine translation to TTS) serving tens of thousands of concurrent users at 99.9% SLA. Expertise in LLM-as-judge evaluation, inference optimization, and multi-tenant production infrastructure.`,
 };
@@ -260,112 +260,112 @@ export const projects = [{
 
 ];
 export const certificates = [{
-        title: "Fundamentals of Accelerated Computing with CUDA Python",
-        issuer: "NVIDIA",
-        issued: "Mar 2026",
-        credentialId: "0cOz8eCeS2SY1qJlPyYxJQ",
-        link: "https://www.linkedin.com/in/paritosh-gandre/overlay/Certifications/973035469/treasury/?profileId=ACoAACriTFwBZHJ4g7EmpFvS38xqbrk7WxokjqE",
-        skills: ["CUDA", "Python", "Accelerated Computing", "GPU Programming"]
-    },
-    {
-        title: "5-Day AI Agents Intensive Course",
-        issuer: "Google x Kaggle",
-        issued: "Dec 2025",
-        credentialId: "",
-        link: "https://www.kaggle.com/certification/badges/paritoshgandre/105",
-        skills: [
-            "AI Agents",
-            "Multi-Agent Systems",
-            "LLM Orchestration",
-            "Prompt Engineering",
-            "Agent Design Patterns",
-            "Tool Calling",
-            "Applied Generative AI"
-        ],
-        relatedRepo: "https://github.com/paritosh100/5-days-ai-agent-intensive-course"
-    },
-    {
-        title: "Python for Data Science, AI & Development",
-        issuer: "IBM",
-        issued: "Dec 2025",
-        // credentialId: "DKM8H1I7EA9X",
-        link: "https://www.coursera.org/account/accomplishments/verify/DKM8H1I7EA9X",
-        skills: [
-            "Python",
-            "Data Science",
+    title: "Fundamentals of Accelerated Computing with CUDA Python",
+    issuer: "NVIDIA",
+    issued: "Mar 2026",
+    credentialId: "0cOz8eCeS2SY1qJlPyYxJQ",
+    link: "https://www.linkedin.com/in/paritosh-gandre/overlay/Certifications/973035469/treasury/?profileId=ACoAACriTFwBZHJ4g7EmpFvS38xqbrk7WxokjqE",
+    skills: ["CUDA", "Python", "Accelerated Computing", "GPU Programming"]
+},
+{
+    title: "5-Day AI Agents Intensive Course",
+    issuer: "Google x Kaggle",
+    issued: "Dec 2025",
+    credentialId: "",
+    link: "https://www.kaggle.com/certification/badges/paritoshgandre/105",
+    skills: [
+        "AI Agents",
+        "Multi-Agent Systems",
+        "LLM Orchestration",
+        "Prompt Engineering",
+        "Agent Design Patterns",
+        "Tool Calling",
+        "Applied Generative AI"
+    ],
+    relatedRepo: "https://github.com/paritosh100/5-days-ai-agent-intensive-course"
+},
+{
+    title: "Python for Data Science, AI & Development",
+    issuer: "IBM",
+    issued: "Dec 2025",
+    // credentialId: "DKM8H1I7EA9X",
+    link: "https://www.coursera.org/account/accomplishments/verify/DKM8H1I7EA9X",
+    skills: [
+        "Python",
+        "Data Science",
 
-            "Data Analysis",
-            "Data Visualization",
-            "APIs",
-            "AI Foundations"
-        ],
-        // relatedRepo: "https://github.com/paritosh100"
-    },
-    {
-        title: "AWS Cloud Technical Essentials",
-        issuer: "Amazon Web Services (AWS)",
-        issued: "Oct 2025",
-        credentialId: "",
-        link: "https://www.coursera.org/account/accomplishments/verify/8F03GLXTK4NS", // add Credly/URL if you have it
-        skills: ["AWS", "EC2", "S3", "RDS", "VPC", "CloudWatch", "Auto Scaling"],
-        relatedRepo: "https://github.com/paritosh100/AWS-3-Tier-Architecture-Project"
-    },
-    {
-        title: "AWS Educate: Introduction to Generative AI",
-        issuer: "Amazon Web Services (AWS)",
-        issued: "Aug 2025",
-        credentialId: "",
-        link: "https://www.credly.com/badges/8f7218d6-a436-4fd5-adff-1eb01796ddf2/linked_in_profile",
-        skills: ["Generative AI", "AWS", "Redshift"]
-    },
-    {
-        title: "Biology Meets Programming: Bioinformatics for Beginners",
-        issuer: "UC San Diego",
-        issued: "Aug 2025",
-        credentialId: "",
-        link: "https://www.coursera.org/account/accomplishments/verify/XZRFEZ8ZEDMV", // add certificate URL if available
-        skills: ["Molecular Biology", "Bioinformatics", "Python", "Genomics", "Data Structures"]
-    },
-    {
-        title: "Building Computer Vision Applications with Python",
-        issuer: "LinkedIn Learning",
-        issued: "Jul 2025",
-        credentialId: "",
-        link: "https://www.linkedin.com/learning/certificates/693598670cfe9c715af210c87b59a03e9dd66416f7fce775d509763a836e0ddb?trk=share_certificate", // add LinkedIn/Cert URL if available
-        skills: ["Python", "OpenCV"]
-    },
-    {
-        title: "Generative AI with Diffusion Models",
-        issuer: "NVIDIA",
-        issued: "Nov 2024",
-        credentialId: "",
-        link: "https://www.linkedin.com/in/paritosh-gandre/details/certifications/1731709384372/single-media-viewer/?profileId=ACoAACriTFwBZHJ4g7EmpFvS38xqbrk7WxokjqE", // add NVIDIA/Cert URL if available
-        skills: ["Generative AI", "Diffusion Models"]
-    },
-    {
-        title: "Data Analysis with R Programming",
-        issuer: "Google",
-        issued: "Oct 2024",
-        credentialId: "",
-        link: "https://www.coursera.org/account/accomplishments/verify/UU47EMIV791H", // add Coursera/Google URL if available
-        skills: ["R", "Data Analysis", "Statistical Analysis"]
-    },
-    {
-        title: "AWS Academy Graduate – Cloud Foundations",
-        issuer: "Amazon Web Services (AWS)",
-        issued: "May 2023",
-        credentialId: "",
-        link: "https://www.credly.com/badges/2acb7a77-af52-4627-9e11-992b1fed6a24/linked_in_profile",
-        skills: ["AWS", "Cloud Computing", "Data Analytics"]
-    },
-    {
-        title: "AWS Academy Graduate – Data Analytics",
-        issuer: "Amazon Web Services (AWS)",
-        issued: "May 2023",
-        credentialId: "",
-        link: "https://www.credly.com/badges/7f5edf39-7003-40f0-8d2a-09ef103865ff/linked_in_profile",
-        skills: ["AWS", "Data Analytics", "Cloud Computing"]
-    }
+        "Data Analysis",
+        "Data Visualization",
+        "APIs",
+        "AI Foundations"
+    ],
+    // relatedRepo: "https://github.com/paritosh100"
+},
+{
+    title: "AWS Cloud Technical Essentials",
+    issuer: "Amazon Web Services (AWS)",
+    issued: "Oct 2025",
+    credentialId: "",
+    link: "https://www.coursera.org/account/accomplishments/verify/8F03GLXTK4NS", // add Credly/URL if you have it
+    skills: ["AWS", "EC2", "S3", "RDS", "VPC", "CloudWatch", "Auto Scaling"],
+    relatedRepo: "https://github.com/paritosh100/AWS-3-Tier-Architecture-Project"
+},
+{
+    title: "AWS Educate: Introduction to Generative AI",
+    issuer: "Amazon Web Services (AWS)",
+    issued: "Aug 2025",
+    credentialId: "",
+    link: "https://www.credly.com/badges/8f7218d6-a436-4fd5-adff-1eb01796ddf2/linked_in_profile",
+    skills: ["Generative AI", "AWS", "Redshift"]
+},
+{
+    title: "Biology Meets Programming: Bioinformatics for Beginners",
+    issuer: "UC San Diego",
+    issued: "Aug 2025",
+    credentialId: "",
+    link: "https://www.coursera.org/account/accomplishments/verify/XZRFEZ8ZEDMV", // add certificate URL if available
+    skills: ["Molecular Biology", "Bioinformatics", "Python", "Genomics", "Data Structures"]
+},
+{
+    title: "Building Computer Vision Applications with Python",
+    issuer: "LinkedIn Learning",
+    issued: "Jul 2025",
+    credentialId: "",
+    link: "https://www.linkedin.com/learning/certificates/693598670cfe9c715af210c87b59a03e9dd66416f7fce775d509763a836e0ddb?trk=share_certificate", // add LinkedIn/Cert URL if available
+    skills: ["Python", "OpenCV"]
+},
+{
+    title: "Generative AI with Diffusion Models",
+    issuer: "NVIDIA",
+    issued: "Nov 2024",
+    credentialId: "",
+    link: "https://www.linkedin.com/in/paritosh-gandre/details/certifications/1731709384372/single-media-viewer/?profileId=ACoAACriTFwBZHJ4g7EmpFvS38xqbrk7WxokjqE", // add NVIDIA/Cert URL if available
+    skills: ["Generative AI", "Diffusion Models"]
+},
+{
+    title: "Data Analysis with R Programming",
+    issuer: "Google",
+    issued: "Oct 2024",
+    credentialId: "",
+    link: "https://www.coursera.org/account/accomplishments/verify/UU47EMIV791H", // add Coursera/Google URL if available
+    skills: ["R", "Data Analysis", "Statistical Analysis"]
+},
+{
+    title: "AWS Academy Graduate – Cloud Foundations",
+    issuer: "Amazon Web Services (AWS)",
+    issued: "May 2023",
+    credentialId: "",
+    link: "https://www.credly.com/badges/2acb7a77-af52-4627-9e11-992b1fed6a24/linked_in_profile",
+    skills: ["AWS", "Cloud Computing", "Data Analytics"]
+},
+{
+    title: "AWS Academy Graduate – Data Analytics",
+    issuer: "Amazon Web Services (AWS)",
+    issued: "May 2023",
+    credentialId: "",
+    link: "https://www.credly.com/badges/7f5edf39-7003-40f0-8d2a-09ef103865ff/linked_in_profile",
+    skills: ["AWS", "Data Analytics", "Cloud Computing"]
+}
 ];
 
 
@@ -403,22 +403,22 @@ export const nav = [
 
 // Education (simple example)
 export const education = [{
-        school: "Kent State University",
-        degree: "M.S. in Data Science",
-        dates: "Aug 2023 – May 2025",
-        details: `GPA: 3.4
+    school: "Kent State University",
+    degree: "M.S. in Data Science",
+    dates: "Aug 2023 – May 2025",
+    details: `GPA: 3.4
 Coursework: Machine Learning, Deep Learning, Applied Statistics, Big Data Analytics, Cloud Computing, Information Visualization
 Research: Genomic sequence classification (CNNs & HMMs); healthcare monitoring dashboards; infection-spread simulations
 Tools & Platforms: Python, R, SQL, TensorFlow, PyTorch, Power BI, Tableau, AWS, GCP
 Skills: Statistics, Model Interpretation, Machine Learning, Organization`
-    },
-    {
-        school: "University of Mumbai",
-        degree: "B.E. in Computer Science",
-        dates: "Jan 2021 – Jun 2023",
-        details: `GPA: 8.99
+},
+{
+    school: "University of Mumbai",
+    degree: "B.E. in Computer Science",
+    dates: "Jan 2021 – Jun 2023",
+    details: `GPA: 8.99
 Activities: Social Wing Committee
 Projects: Web app development; insurance cost prediction (ML); data-driven blog platform
 Skills Applied: Python, Java, C++, SQL, HTML/CSS, JavaScript; Excel, Power BI, Tableau; Responsive Design, Problem Solving, Teamwork`
-    }
+}
 ];

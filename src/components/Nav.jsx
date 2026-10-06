@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { nav } from '../data.js';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { nav, identity, social } from '../data.js';
+import { Menu, X, Sun, Moon, FileText, Github, Linkedin, Mail, Newspaper } from 'lucide-react';
 
 export default function Nav({ active }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,17 +105,37 @@ export default function Nav({ active }) {
               </a>
             </li>
           ))}
-          <li style={{ display: 'inline-flex', alignItems: 'center' }}>
-            <button
-              onClick={toggleTheme}
-              className="theme-toggle-btn"
-              aria-label="Toggle theme"
-              style={{ marginLeft: '12px' }}
-            >
-              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-          </li>
         </ul>
+
+        <span className="status-pill">
+          <span className="dot" />
+          Open to opportunities
+        </span>
+
+        <div className="nav-actions">
+          <a href={identity.resumeUrl} className="nav-icon-btn" aria-label="Resume" target="_blank" rel="noopener noreferrer">
+            <FileText size={15} />
+          </a>
+          <a href={social.github} className="nav-icon-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <Github size={15} />
+          </a>
+          <a href={social.linkedin} className="nav-icon-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <Linkedin size={15} />
+          </a>
+          <a href={social.medium} className="nav-icon-btn" aria-label="Medium blog" target="_blank" rel="noopener noreferrer">
+            <Newspaper size={15} />
+          </a>
+          <a href={social.email} className="nav-icon-btn" aria-label="Email">
+            <Mail size={15} />
+          </a>
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle-btn"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Top Header Actions */}

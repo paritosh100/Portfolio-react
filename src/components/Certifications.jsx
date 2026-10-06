@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { certificates } from '../data.js';
 import { Award, ExternalLink, GitBranch } from 'lucide-react';
+import Carousel from './Carousel.jsx';
 
 export default function Certificates() {
   const easeOut = [0.23, 1, 0.32, 1]; // Emil's custom easing
@@ -20,7 +21,7 @@ export default function Certificates() {
         </motion.h2>
       </header>
 
-      <div className="cert-grid">
+      <Carousel>
         {certificates.map((cert, i) => (
           <motion.article
             key={i}
@@ -98,7 +99,7 @@ export default function Certificates() {
             </div>
           </motion.article>
         ))}
-      </div>
+      </Carousel>
     </div>
   );
 }

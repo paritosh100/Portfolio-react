@@ -51,18 +51,15 @@ export default function TerminalComponent() {
       transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1], delay: 0.3 }}
       className="terminal-container"
       style={{
-        background: 'oklch(14% 0.004 350 / 0.95)',
-        backdropFilter: 'blur(12px)',
-        border: '1px solid var(--border-color)',
+        background: 'var(--bg-code)',
+        border: '1px solid #1E293B',
         borderRadius: '8px',
-        padding: '18px 24px',
+        padding: '14px 20px',
         fontFamily: "'JetBrains Mono', monospace",
-        fontSize: '0.885rem',
-        color: 'var(--text-primary)',
-        maxWidth: '650px',
-        boxShadow: 'var(--shadow-md)',
-        marginTop: '8px',
-        transition: 'border-color var(--transition-fast), box-shadow var(--transition-fast)',
+        fontSize: '0.8125rem',
+        color: '#F8FAFC',
+        maxWidth: '560px',
+        marginTop: '4px',
       }}
     >
       {/* Title Bar Controls */}
@@ -75,7 +72,7 @@ export default function TerminalComponent() {
       {/* Terminal Line */}
       <div style={{ display: 'flex', alignItems: 'flex-start', minHeight: '24px', lineHeight: '1.5' }}>
         <span style={{ color: 'var(--accent-primary)', marginRight: '10px', userSelect: 'none', fontWeight: 600 }}>&gt;</span>
-        <span style={{ color: 'oklch(93% 0.003 350)' }}>
+        <span style={{ color: '#E2E8F0' }}>
           {displayText}
           <span
             style={{

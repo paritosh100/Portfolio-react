@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionTemplate, useSpring, useMotionValue } from 'framer-motion';
 import { projects } from '../data.js';
-import { ExternalLink, Github, X } from 'lucide-react';
+import { ExternalLink, Github, X, Play } from 'lucide-react';
+import Carousel from './Carousel.jsx';
 
 const easeOut = [0.23, 1, 0.32, 1]; // Emil's custom easing
 
@@ -89,6 +90,33 @@ function ProjectCard({ project, index, onClick }) {
             </p>
           </motion.div>
         </div>
+
+        {(project.live || project.repo) && (
+          <div className="project-telemetry">
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-telemetry-link"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Play size={12} /> Live demo
+              </a>
+            )}
+            {project.repo && (
+              <a
+                href={project.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-telemetry-link"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Github size={12} /> Source
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </motion.article>
   );
@@ -124,7 +152,7 @@ export default function Projects() {
         </motion.h2>
       </header>
 
-      <div className="bento-grid">
+      <Carousel>
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -133,7 +161,7 @@ export default function Projects() {
             onClick={() => setExpandedIndex(index)}
           />
         ))}
-      </div>
+      </Carousel>
 
       <AnimatePresence>
         {expandedIndex !== null && (

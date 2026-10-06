@@ -46,11 +46,7 @@ export default function Experience() {
                 <span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{exp.company}</span>
               </div>
 
-              <ul className="bullets">
-                {exp.bullets.map((b, j) => (
-                  <li key={j}>{b}</li>
-                ))}
-              </ul>
+              <p className="timeline-summary">{exp.summary}</p>
             </motion.article>
           ))}
         </div>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { social } from '../data.js';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Newspaper } from 'lucide-react';
 
 export default function Footer() {
   const easeOut = [0.23, 1, 0.32, 1]; // Emil's custom easing
@@ -44,6 +44,17 @@ export default function Footer() {
             >
               <Linkedin size={15} />
               <span>LinkedIn</span>
+            </a>
+          )}
+          {social.medium && (
+            <a
+              href={social.medium}
+              aria-label="Medium blog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Newspaper size={15} />
+              <span>Blog</span>
             </a>
           )}
         </motion.div>

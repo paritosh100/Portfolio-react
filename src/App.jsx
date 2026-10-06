@@ -19,22 +19,22 @@ export default function App() {
   
   useEffect(() => {
     const ids = nav.map((n) => n.id);
-    const obs = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) {
-            setActive(e.target.id);
-            break;
-          }
+    const sections = ids.map((id) => document.getElementById(id)).filter(Boolean);
+    const navOffset = 100; // px below the sticky nav
+
+    const handleScroll = () => {
+      let current = sections[0]?.id;
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= navOffset) {
+          current = section.id;
         }
-      },
-      { rootMargin: '-40% 0px -50% 0px', threshold: 0.1 }
-    );
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) obs.observe(el);
-    });
-    return () => obs.disconnect();
+      }
+      if (current) setActive(current);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (

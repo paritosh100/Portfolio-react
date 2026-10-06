@@ -60,6 +60,24 @@ test-results.xml
 *.code-workspace
 
 # =====================================
+# Bot / Python backend
+# =====================================
+
+# Python virtualenv
+bot/.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Bot local secrets
+bot/.env
+
+# FAISS index + cache (rebuilt by CI, not committed)
+bot/cache/
+*.index
+*.npy
+
+# =====================================
 # Custom project extras
 # =====================================
 

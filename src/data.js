@@ -48,81 +48,50 @@ export const experiences = [{
         company: "OViiE AI (STELLA™)",
         role: "Senior Machine Learning Engineer",
         start: "Nov 2025",
-        end: "Present",
-        bullets: [
-            "Shipped 6 production systems end-to-end (database, backend, frontend) within a real-time AI voice translation platform, integrating cloud speech-to-text, custom translation model deployment, and real-time speech synthesis over WebRTC at sub-1000ms end-to-end latency",
-            "Diagnosed a production translation service running under 3% GPU utilization and resolved it via concurrent request handling, dynamic batching, and model quantization, driving 8x throughput and roughly 38% lower infrastructure costs; separately cut P95 inference latency ~30% and raised peak GPU utilization from under 5% to over 60% through model export optimization and batching tuning",
-            "Built an AI-graded multi-model evaluation harness (LLM-as-judge) across multiple language pairs, running A/B tests comparing commercial and self-hosted translation model options and identifying/resolving failure modes (hallucination, sentence-drop) to inform migration to a higher-performing production model",
-            "Reduced TTS synthesis costs 80% (4x fewer redundant synthesis calls) via provider-change-immune LRU caching achieving 95%+ cache hit rates, delivering multi-five-figure annual infrastructure savings",
-            "Hardened multi-tenant security with PostgreSQL Row-Level Security, RBAC, GDPR-compliant audit trails, and TOTP-based MFA across a platform serving dozens of hospitality properties, achieving zero cross-org incidents",
-            "Achieved 90%+ test coverage (2,000+ automated tests) across database, API, and frontend layers, maintaining zero customer-facing billing or production errors in a live multi-tenant environment"
-        ]
+        end: "Sep 2026",
+        summary: "Shipped 6 production systems end-to-end for a real-time AI voice translation platform over WebRTC at sub-1000ms latency, then diagnosed a translation service stuck under 3% GPU utilization and fixed it via concurrent request handling, dynamic batching, and quantization — driving 8x throughput, ~38% lower infra costs, and GPU utilization from under 5% to over 60%. Built an LLM-as-judge evaluation harness to A/B test commercial vs. self-hosted translation models, cut TTS costs 80% through caching (95%+ hit rate), and hardened the multi-tenant platform with row-level security, RBAC, and GDPR-compliant auditing — backed by 90%+ test coverage (2,000+ automated tests) with zero production incidents."
     },
     {
         company: "Kent State University",
         role: "Research Assistant",
         start: "Jul 2025",
         end: "Dec 2025",
-        bullets: [
-            "Built a real-time mobile application for exercise form correction using React Native, TensorFlow Lite, and VisionCamera, enabling on-device pose analysis and feedback",
-            "Optimized on-device inference pipelines to achieve sub-50 ms latency, supporting smooth visual and audio guidance during live exercise sessions",
-            "Designed modular, type-safe TypeScript components to support scalable addition of new exercises, pose rules, and feedback logic"
-        ]
+        summary: "Built a real-time mobile app for exercise form correction, running on-device pose analysis with React Native and TensorFlow Lite at sub-50ms latency, with a modular TypeScript architecture designed to scale to new exercises and feedback rules."
     },
     {
         company: "Kent State University",
         role: "Research Assistant – Deep Learning for Genomic Data Analysis",
         start: "Feb 2025",
         end: "May 2025",
-        bullets: [
-            "Engineered CNN-based DNA classifier, improving accuracy by 7% over baseline models",
-            "Reduced training time by 15% through optimized data balancing and GPU batching",
-            "Automated Dockerized ETL pipelines, reducing preprocessing effort by 80%"
-        ]
+        summary: "Engineered a CNN-based DNA classifier that improved accuracy 7% over baseline, cut training time 15% through optimized data balancing, and automated a Dockerized ETL pipeline that reduced preprocessing effort 80%."
     },
     {
         company: "Kent State University",
         role: "Data Analyst – Supply Chain",
         start: "Jan 2025",
         end: "May 2025",
-        bullets: [
-            "Forecasted ingredient demand using ARIMA, reducing over-purchasing by 15% (~$10K savings)",
-            "Automated SQL-to-Power BI pipeline with AWS S3, reducing reporting latency by 30%",
-            "Conducted A/B testing for procurement strategies, improving forecast reliability"
-        ]
+        summary: "Forecasted ingredient demand with ARIMA to cut over-purchasing 15% (~$10K saved), automated an AWS-backed SQL-to-Power BI reporting pipeline, and ran A/B tests on procurement strategies to improve forecast reliability."
     },
     {
         company: "Inke (SafeSpace)",
         role: "Data Scientist – AI Engineering",
         start: "May 2024",
         end: "Dec 2024",
-        bullets: [
-            "Designed recommendation algorithms with collaborative filtering, boosting CTR by 10%",
-            "Deployed Airflow-based retraining pipelines on AWS EC2, improving reliability by 30%",
-            "Optimized Django REST APIs using Docker, reducing response latency by 30%"
-        ]
+        summary: "Designed collaborative-filtering recommendation algorithms that boosted CTR 10%, deployed Airflow-based retraining pipelines on AWS EC2 for 30% better reliability, and optimized Dockerized Django REST APIs to cut response latency 30%."
     },
     {
         company: "Kent State University",
         role: "Operations Data Analyst (Catering Analytics Associate)",
         start: "Apr 2024",
         end: "Dec 2024",
-        bullets: [
-            "Analyzed 15K+ POS records to optimize procurement, reducing food costs by 12% (~$4.8K savings)",
-            "Developed Power BI/Tableau dashboards for KPI visualization, accelerating decision-making by 30%",
-            "Automated Excel/VBA reporting processes, cutting manual time by 25%"
-        ]
+        summary: "Analyzed 15K+ POS records to optimize procurement, cutting food costs 12% (~$4.8K saved), built Power BI/Tableau KPI dashboards that sped up decision-making 30%, and automated Excel/VBA reporting to cut manual time 25%."
     },
     {
         company: "S L Kulkarni Cyril Graphics Pvt. Ltd.",
         role: "Data Scientist",
         start: "Jan 2022",
         end: "Jun 2023",
-        bullets: [
-            "Developed predictive maintenance models using sensor data, reducing downtime by 20%",
-            "Built real-time dashboard using Python, Flask, and SQL for machine health monitoring",
-            "Engineered ETL pipelines integrating heterogeneous datasets, improving efficiency by 30%"
-        ]
+        summary: "Developed sensor-driven predictive maintenance models that cut downtime 20%, built a Flask/SQL real-time machine health dashboard, and engineered ETL pipelines integrating heterogeneous datasets for a 30% efficiency gain."
     }
 ];
 

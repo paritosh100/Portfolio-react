@@ -1,26 +1,9 @@
-import { useRef, useState, useEffect, useCallback } from 'react';
+import { useRef, useState, useEffect, useCallback, Children } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Matches the site's --ease-out cubic-bezier(0.23, 1, 0.32, 1) closely enough for a scroll tween.
-function easeOutCubic(t) {
-  return 1 - Math.pow(1 - t, 3);
-}
-
-function smoothScrollTo(el, target, duration = 450) {
-  const start = el.scrollLeft;
-  const distance = target - start;
-  const startTime = performance.now();
-
-  function step(now) {
-    const elapsed = Math.min((now - startTime) / duration, 1);
-    el.scrollLeft = start + distance * easeOutCubic(elapsed);
-    if (elapsed < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-
-export default function Carousel({ children }) {
+export default function Carousel({ children: rawChildren }) {
+  const children = Children.toArray(rawChildren);
   const trackRef = useRef(null);
   const itemRefs = useRef([]);
   const [atStart, setAtStart] = useState(true);
@@ -69,7 +52,7 @@ export default function Carousel({ children }) {
       el.removeEventListener('scroll', updateEdges);
       window.removeEventListener('resize', updateEdges);
     };
-  }, [children, updateEdges]);
+  }, [rawChildren, updateEdges]);
 
   const scrollByPage = (dir) => {
     const el = trackRef.current;
@@ -80,7 +63,7 @@ export default function Carousel({ children }) {
     if (!targetNode) return;
 
     const maxScroll = el.scrollWidth - el.clientWidth;
-    smoothScrollTo(el, Math.min(targetNode.offsetLeft, maxScroll));
+    el.scrollTo({ left: Math.min(targetNode.offsetLeft, maxScroll), behavior: 'smooth' });
   };
 
   return (

@@ -122,9 +122,11 @@ export default function Nav({ active }) {
           <a href={social.linkedin} className="nav-icon-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <Linkedin size={15} />
           </a>
-          <a href={social.medium} className="nav-icon-btn" aria-label="Medium blog" target="_blank" rel="noopener noreferrer">
-            <Newspaper size={15} />
-          </a>
+          {social.medium && (
+            <a href={social.medium} className="nav-icon-btn" aria-label="Medium blog" target="_blank" rel="noopener noreferrer">
+              <Newspaper size={15} />
+            </a>
+          )}
           <a href={social.email} className="nav-icon-btn" aria-label="Email">
             <Mail size={15} />
           </a>

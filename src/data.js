@@ -13,14 +13,6 @@ export const identity = {
     shortIntro: `Senior Machine Learning Engineer with 3+ years building production real-time voice AI systems. Architecting sub-1000ms latency inference pipelines (ASR to neural machine translation to TTS) serving tens of thousands of concurrent users at 99.9% SLA. Expertise in LLM-as-judge evaluation, inference optimization, and multi-tenant production infrastructure.`,
 };
 
-// About + skills
-export const about = {
-    bio: `I'm a Machine Learning Engineer with 3+ years of production experience building real-time voice AI and LLM systems at scale. My work spans architecting end-to-end inference pipelines (speech-to-text, neural machine translation, speech synthesis) with sub-1000ms latency, building LLM-as-judge evaluation harnesses to standardize model selection and release gating, and hardening multi-tenant production infrastructure with row-level security, RBAC, and GDPR-compliant audit trails. I hold an M.S. in Data Science from Kent State University, where my research applied CNN and transformer architectures to genomic sequence classification. My focus is on bridging ML research into reliable, observable production systems.`,
-    skills: [
-
-    ]
-};
-
 export const skills = {
     "ML & Voice AI": [
         "PyTorch", "TensorFlow", "CUDA", "LLM-as-judge evaluation",

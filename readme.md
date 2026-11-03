@@ -6,3 +6,6 @@ A minimalist, dark-theme, single-page portfolio for data scientists. Built with 
 ```bash
 npm install
 npm run dev
+```
+
+Edit `src/data.js` to change all content. Build with `npm run build`; deploys on Vercel.

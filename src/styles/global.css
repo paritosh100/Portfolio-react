@@ -1074,7 +1074,7 @@ a:hover {
 .carousel-nav {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  margin-top: -24px; /* centre without transform: framer-motion's hover scale overwrites it */
   z-index: 2;
   width: 48px;
   height: 48px;

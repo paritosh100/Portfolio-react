@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { nav, identity, social } from '../data.js';
-import { Menu, X, Sun, Moon, FileText, Github, Linkedin, Mail, Newspaper } from 'lucide-react';
+import { Menu, X, Sun, Moon, FileText, Github, Linkedin, Mail } from 'lucide-react';
+import { SiMedium } from 'react-icons/si';
 
 export default function Nav({ active }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -123,8 +124,9 @@ export default function Nav({ active }) {
             <Linkedin size={15} />
           </a>
           {social.medium && (
-            <a href={social.medium} className="nav-icon-btn" aria-label="Medium blog" target="_blank" rel="noopener noreferrer">
-              <Newspaper size={15} />
+            <a href={social.medium} className="nav-icon-btn nav-label-btn" aria-label="Medium blog" target="_blank" rel="noopener noreferrer">
+              <SiMedium size={15} />
+              <span>Medium</span>
             </a>
           )}
           <a href={social.email} className="nav-icon-btn" aria-label="Email">

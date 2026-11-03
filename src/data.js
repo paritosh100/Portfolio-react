@@ -344,7 +344,8 @@ export const publications = [{
 export const social = {
     github: "https://github.com/paritosh100",
     linkedin: "https://www.linkedin.com/in/paritosh-gandre",
-    email: "mailto:paritoshkrcg@gmail.com"
+    email: "mailto:paritoshkrcg@gmail.com",
+    medium: "https://medium.com/@paritoshg"
 };
 
 // Navigation labels (edit if you want custom wording)

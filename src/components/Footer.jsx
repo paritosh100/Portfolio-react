@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { social } from '../data.js';
-import { Github, Linkedin, Mail, Newspaper } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
+import { SiMedium } from 'react-icons/si';
 
 export default function Footer() {
   const easeOut = [0.23, 1, 0.32, 1]; // Emil's custom easing
@@ -53,8 +54,8 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Newspaper size={15} />
-              <span>Blog</span>
+              <SiMedium size={15} />
+              <span>Medium</span>
             </a>
           )}
         </motion.div>
